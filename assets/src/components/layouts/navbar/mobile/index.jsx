@@ -17,8 +17,24 @@ const NavbarMobile = () => {
             height={75}
           />
         </div>
-        <div className="flex flex-row justify-center">
-          <p>Naturopied</p>
+        <div>
+          {/* <ul className="flex flex-col items-end mr-16  ">
+            <li className=" hover:bg-white hover:rounded-full hover:text-black text-4xl  ">
+              <a href="http://localhost:8000/login">
+                <RiAdminLine />
+              </a>
+            </li>
+            <li className=" hover:bg-white hover:rounded-full hover:text-black my-2 text-4xl">
+              <Link to="/dashboard">
+                <IoSpeedometerOutline />
+              </Link>
+            </li>
+            <li className=" hover:bg-white hover:rounded-full hover:text-black text-4xl">
+              <Link to="/admin#/products">
+                <TbApi />
+              </Link>
+            </li>
+          </ul> */}
         </div>
       </nav>
     </header>
