@@ -8,7 +8,7 @@ const Introduction = () => {
       <div className=" md:mx-12 lg:grid lg:grid-cols-2">
         <div className=" flex flex-row w-full  my-10">
           <p>
-            Bonjour, bienvenue sur le site Naturopied ! Vous allez découvrir un
+            Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
             site sur la Nature avec des randonnées à effectuer sur le
             territoire. Bonne balade{" "}
           </p>
