@@ -10,7 +10,7 @@ const Introduction = () => {
           <p>
             Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
             site sur la Nature avec des randonnées à effectuer sur le
-            territoire. Bonne balade{" "}
+            territoire. Bonne balade !
           </p>
    
         </div>
