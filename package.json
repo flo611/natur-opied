@@ -27,7 +27,7 @@
     "dev:react": "encore dev-server",
     "prod": "sudo composer install && pnpm run prod:sequence",
     "prod:sequence": "pnpm install && pnpm run prod:autoloader ",
-    "prod:autoloader": "composer install --no-dev --optimize-autoloader && pnpm run prod:compile",
+    "prod:autoloader": "composer install --no-dev --optimize-autoloader && npm run prod:compile",
     "prod:compile": "encore dev",
     "restart": "sudo systemctl restart nginx && pnpm run restart:success",
     "restart:success": "echo Success !",

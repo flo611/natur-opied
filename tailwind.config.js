@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      shine: "url('http://localhost:8000/images/background.jpg')",
+      shine: "url('/images/background.jpg')",
     },
   },
   plugins: [],
