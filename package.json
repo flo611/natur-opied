@@ -25,7 +25,7 @@
     "dev": "composer install && npm install && run-p start:**",
     "dev:symfony": "symfony serve",
     "dev:react": "encore dev-server",
-    "prod": "export NODE_OPTIONS=--max-old-space-size=1024 && composer install && pnpm run prod:sequence",
+    "prod": "cross-env NODE_OPTIONS=--max-old-space-size=1024 && composer install && pnpm run prod:sequence",
     "prod:sequence": "pnpm install && pnpm run prod:autoloader ",
     "prod:autoloader": "composer install --no-dev --optimize-autoloader && pnpm run prod:assets",
     "prod:assets": "pnpm run prod:compile",
