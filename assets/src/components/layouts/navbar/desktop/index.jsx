@@ -24,7 +24,7 @@ const Navbardesktop = () => {
 
         <div>
           <ul className="flex flex-row w-full justify-center items-center text-2xl">
-            <a href="http://localhost:8000/">
+            <a href="https://naturopied.sabine-portfolio.fr/">
               <li className=" hover:bg-white hover:rounded-full hover:text-black p-4">
                 Home
               </li>

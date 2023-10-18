@@ -4,7 +4,7 @@ export let styles = {
     width: "34px",
     height: "28px",
     left: "20px",
-    top: "34px",
+    top: "70px",
   },
   bmBurgerBars: {
     background: "white",
