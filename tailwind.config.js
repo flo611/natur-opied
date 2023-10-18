@@ -11,7 +11,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      shine: "url('/images/background.jpg')",
+      shine: "url('https://naturopied.sabine-portfolio.fr/images/background.jpg')",
     },
   },
   plugins: [],
