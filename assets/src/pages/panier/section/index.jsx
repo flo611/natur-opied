@@ -3,6 +3,7 @@ import Button from "../../../components/tools/button";
 import { CartContext } from "../../../components/context/cartProvider";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import {SlBasket} from"react-icons/sl"
 
 const Panier = () => {
   const {
@@ -67,8 +68,8 @@ const Panier = () => {
 
   return (
     <>
-      <h1 className="w-full flex justify-center text-white uppercase  pt-6 font-bold  lg:py-40 lg:text-3xl">
-        Hello panier
+      <h1 className="w-full flex justify-center text-white text-4xl  pt-14 font-bold  lg:py-48 lg:text-6xl">
+        <SlBasket/>
       </h1>
       <div className="card mx-60">
         <div className="contain lg:mx-40 lg:py-10 text-red-500 ">
