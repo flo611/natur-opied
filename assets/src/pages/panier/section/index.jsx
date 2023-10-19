@@ -3,7 +3,7 @@ import Button from "../../../components/tools/button";
 import { CartContext } from "../../../components/context/cartProvider";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import {SlBasket} from"react-icons/sl"
+import { SlBasket } from "react-icons/sl";
 
 const Panier = () => {
   const {
@@ -19,7 +19,6 @@ const Panier = () => {
     (acc, val) => acc + val,
     0
   );
- 
 
   const DeleteItem = (id) => {
     const updatedBasket = [...basket];
@@ -27,6 +26,7 @@ const Panier = () => {
     const filteredBasket = updatedBasket.filter((item) => item.id !== id);
 
     setBasket(filteredBasket);
+
     // const newTotal = filteredBasket.reduce((acc, item) => acc + item.tarifs, 0);
     // localStorage.setItem('total', JSON.stringify(newTotal));
     // setTotalBasket(newTotal);
@@ -36,21 +36,16 @@ const Panier = () => {
     // setTotalBasket(newTotalQty);
     // localStorage.setItem('total', JSON.stringify(newTotalQty));
     // setTotalArrayBasket(filteredBasket);
-  
-
   };
-
-
-
-
 
   const test = [];
 
   function removeDuplicates(arr) {
     const uniqueIds = [];
 
-    const unique = arr.filter((element) => {
+    const unique = arr.filter((element ) => {
       const isDuplicate = uniqueIds.includes(element.id);
+   
 
       if (!isDuplicate) {
         uniqueIds.push(element.id);
@@ -69,7 +64,7 @@ const Panier = () => {
   return (
     <>
       <h1 className="w-full flex justify-center text-white text-4xl  pt-14 font-bold  lg:py-48 lg:text-6xl">
-        <SlBasket/>
+        <SlBasket />
       </h1>
       <div className="card mx-60">
         <div className="contain lg:mx-40 lg:py-10 text-red-500 ">
@@ -83,7 +78,7 @@ const Panier = () => {
                         key={element.id}
                         className="w-full inline-flex justify-around"
                       >
-                        Qty:{}
+                        Qty:{element.id}
                         <h1>Titre : {element.name}</h1>
                         <h1>Prix : {element.tarifs}€</h1>
                         <img

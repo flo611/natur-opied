@@ -4,8 +4,8 @@ import Button from "../../../components/tools/button";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../components/context/cartProvider";
 import { ImBin } from "react-icons/im";
-import {TfiWrite } from "react-icons/tfi";
-import {BiSolidImageAdd} from "react-icons/bi"
+import { TfiWrite } from "react-icons/tfi";
+import { BiSolidImageAdd } from "react-icons/bi";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
@@ -87,7 +87,7 @@ const Buy = () => {
 
   const config = {
     headers: {
-      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTcwOTc0MjgsImV4cCI6MTY5NzEwMTAyOCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.Dh7mbJvVA1XdN8TOK6Ph1yGoYu96p6cKQj3B6KUy6yB4cuRX3syka5gyezbUYoyBtTylhBmGTXcjoMCxH7iRKIkuAkd2ZfcnOYERcr5Zt5-VLbNE2z48MtU-BjzEC62LyTYYvnY-hb8NyNQWASktii0WWKJY5CzuTOCaIC0dflNMOac0g0UWmUc5dr0_P2rRZIvmFpU2sr3onlf0TP8AzCD6g4RAULD-ebobkq9TxgsG0pbO9YEeT4ktRqIKMUhyfzyuG4LBFRzYfSoyJvKnibTrH7VTeO8R0pRM1MEZfu4R5B7jGn1IaXWsGoIgDw4bm1pfKvrOoeH1_TStlL-jXA`,
+      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc2OTc5MDUsImV4cCI6MTY5NzcwMTUwNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.gqwE9SHiM7iFthzzOVxKiX7ueVndmNfHCgh7mC2jl56dUBskpcOPYp22xAEJAjaAhf61xwicZ9eparHEhqwMITmaWbEnLy-dLOoT72hU9gn6nwgngyZmuKMWl1b1Qq7pB1x8ZwTme4OEbzlHHk9jlwPwsQFLrvaF86oB4KYDgLbqvYE0weDThMBTpFdxDD7Cw1Uzmvr8MRECVeiVehqg2-uXRDw8BErsSZt3kYeoz9VLTuoWk1n_io1J3W3oSBiXesYTopfKb2NrNwSDja2i8cKqBqvAOTKsDpzzmuuYbeSvZoVvwFLkbhQnayB2Lgku4QEYEnmkKNRW9RjoNZnAtQ`,
     },
   };
   const [adminFields, setAdminFields] = useState({ roles: ["ROLE_ADMIN"] });
@@ -118,7 +118,6 @@ const Buy = () => {
   }, []);
 
   const updateCart = (product, price) => {
-
     basket.push(product);
     totalArrayBasket.push(price);
     window.localStorage.setItem("total", JSON.stringify(totalArrayBasket));
@@ -146,24 +145,23 @@ const Buy = () => {
       ...productQuantities,
       [productId]: newQuantity,
     });
-
   };
-
 
   return (
     <>
       <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
         <img
-  alt="European Union"
-  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/EU.svg"
-  width={100}
-  height={100}/>
+          alt="European Union"
+          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/EU.svg"
+          width={100}
+          height={100}
+        />
       </h1>
       <Popup
         trigger={
           <button className="flex  justify-center text-4xl text-white w-full my-4 animate-bounce  ">
             {" "}
-          <BiSolidImageAdd/>
+            <BiSolidImageAdd />
           </button>
         }
         position="left-bottom"
@@ -264,7 +262,10 @@ const Buy = () => {
                           type="button"
                           value="Ajouter panier"
                           onClick={() => {
-                            updateCart(post, post.tarifs*productQuantities[post.id] || 5);
+                            updateCart(
+                              post,
+                              post.tarifs * productQuantities[post.id] || 5
+                            );
                           }}
                         />
                       </div>
@@ -280,7 +281,9 @@ const Buy = () => {
                         >
                           +
                         </button>
-                        <h1 className="flex justify-center my-4">{productQuantities[post.id] || 1}</h1>
+                        <h1 className="flex justify-center my-4">
+                          {productQuantities[post.id] || 1}
+                        </h1>
                         <button
                           type="button"
                           value="-"
@@ -414,11 +417,12 @@ const Buy = () => {
       </div>
 
       <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
-      <img
-  alt="United States"
-  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
-  width={100}
-  height={100}/>
+        <img
+          alt="United States"
+          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+          width={100}
+          height={100}
+        />
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
@@ -473,116 +477,119 @@ const Buy = () => {
                         </button>
                       </div>
                       <div className="flex flex-row">
-                      {adminFields.roles.includes("ROLE_ADMIN") ? (
-                        <>
-                          <button
-                            type="button"
-                            className="text-2xl"
-                            onClick={() => {
-                              handleDelete(post.id);
-                            }}
-                          >
-                            <ImBin/>
+                        {adminFields.roles.includes("ROLE_ADMIN") ? (
+                          <>
+                            <button
+                              type="button"
+                              className="text-2xl"
+                              onClick={() => {
+                                handleDelete(post.id);
+                              }}
+                            >
+                              <ImBin />
                             </button>
-                        </>
-                      ) : null}
-                    </div>
-                    <Popup
-                      trigger={
-                        <button className="text-2xl flex justify-center pt-6">
-                          {" "}
-                          <TfiWrite/>
-                        </button>
-                      }
-                      position="right center"
-                    >
-                      <div>
-                        <form action="" className="card mx-6 lg:mx-40 lg:mt-6 ">
-                          <div className="contain flex flex-col lg:mx-40 my-10 py-10">
-                            <label className="text-white" htmlFor="">
-                              Name
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  name: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Image
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  image: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Description
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  description: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              All description
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  alldescription: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Tarifs
-                            </label>
-                            <input
-                              type="number"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  tarifs: parseInt(event.target.value),
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Destination
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  destination: event.target.value,
-                                })
-                              }
-                            />
-
-                            <div className="flex justify-center mt-4">
-                              <Button
-                                type="button"
-                                value="Valider"
-                                onClick={() => handlePut(post.id)}
-                              />
-                            </div>
-                          </div>
-                        </form>
+                          </>
+                        ) : null}
                       </div>
-                    </Popup>
+                      <Popup
+                        trigger={
+                          <button className="text-2xl flex justify-center pt-6">
+                            {" "}
+                            <TfiWrite />
+                          </button>
+                        }
+                        position="right center"
+                      >
+                        <div>
+                          <form
+                            action=""
+                            className="card mx-6 lg:mx-40 lg:mt-6 "
+                          >
+                            <div className="contain flex flex-col lg:mx-40 my-10 py-10">
+                              <label className="text-white" htmlFor="">
+                                Name
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    name: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Image
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    image: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Description
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    description: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                All description
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    alldescription: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Tarifs
+                              </label>
+                              <input
+                                type="number"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    tarifs: parseInt(event.target.value),
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Destination
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    destination: event.target.value,
+                                  })
+                                }
+                              />
+
+                              <div className="flex justify-center mt-4">
+                                <Button
+                                  type="button"
+                                  value="Valider"
+                                  onClick={() => handlePut(post.id)}
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </Popup>
                     </div>
                   </div>
                 </div>
@@ -593,12 +600,12 @@ const Buy = () => {
       </div>
 
       <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
-      <img
-  alt="Australia"
-  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AU.svg"
-  width={100}
-  height={100}/>
-
+        <img
+          alt="Australia"
+          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AU.svg"
+          width={100}
+          height={100}
+        />
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
@@ -654,116 +661,119 @@ const Buy = () => {
                         </button>
                       </div>
                       <div className="flex flex-row">
-                      {adminFields.roles.includes("ROLE_ADMIN") ? (
-                        <>
-                          <button
-                            type="button"
-                           className="text-2xl"
-                            onClick={() => {
-                              handleDelete(post.id);
-                            }}
-                          >
-                            <ImBin/>
+                        {adminFields.roles.includes("ROLE_ADMIN") ? (
+                          <>
+                            <button
+                              type="button"
+                              className="text-2xl"
+                              onClick={() => {
+                                handleDelete(post.id);
+                              }}
+                            >
+                              <ImBin />
                             </button>
-                        </>
-                      ) : null}
-                    </div>
-                    <Popup
-                      trigger={
-                        <button className="text-2xl flex justify-center pt-6">
-                          {" "}
-                          <TfiWrite/>
-                        </button>
-                      }
-                      position="right center"
-                    >
-                      <div>
-                        <form action="" className="card mx-6 lg:mx-40 lg:mt-6 ">
-                          <div className="contain flex flex-col lg:mx-40 my-10 py-10">
-                            <label className="text-white" htmlFor="">
-                              Name
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  name: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Image
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  image: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Description
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  description: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              All description
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  alldescription: event.target.value,
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Tarifs
-                            </label>
-                            <input
-                              type="number"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  tarifs: parseInt(event.target.value),
-                                })
-                              }
-                            />
-                            <label className="text-white" htmlFor="">
-                              Destination
-                            </label>
-                            <input
-                              type="text"
-                              onChange={(event) =>
-                                setEditPost({
-                                  ...editPost,
-                                  destination: event.target.value,
-                                })
-                              }
-                            />
-
-                            <div className="flex justify-center mt-4">
-                              <Button
-                                type="button"
-                                value="Valider"
-                                onClick={() => handlePut(post.id)}
-                              />
-                            </div>
-                          </div>
-                        </form>
+                          </>
+                        ) : null}
                       </div>
-                    </Popup>
+                      <Popup
+                        trigger={
+                          <button className="text-2xl flex justify-center pt-6">
+                            {" "}
+                            <TfiWrite />
+                          </button>
+                        }
+                        position="right center"
+                      >
+                        <div>
+                          <form
+                            action=""
+                            className="card mx-6 lg:mx-40 lg:mt-6 "
+                          >
+                            <div className="contain flex flex-col lg:mx-40 my-10 py-10">
+                              <label className="text-white" htmlFor="">
+                                Name
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    name: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Image
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    image: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Description
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    description: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                All description
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    alldescription: event.target.value,
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Tarifs
+                              </label>
+                              <input
+                                type="number"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    tarifs: parseInt(event.target.value),
+                                  })
+                                }
+                              />
+                              <label className="text-white" htmlFor="">
+                                Destination
+                              </label>
+                              <input
+                                type="text"
+                                onChange={(event) =>
+                                  setEditPost({
+                                    ...editPost,
+                                    destination: event.target.value,
+                                  })
+                                }
+                              />
+
+                              <div className="flex justify-center mt-4">
+                                <Button
+                                  type="button"
+                                  value="Valider"
+                                  onClick={() => handlePut(post.id)}
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </Popup>
                     </div>
                   </div>
                 </div>

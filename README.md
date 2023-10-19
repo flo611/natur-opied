@@ -16,7 +16,7 @@ Au niveau du projet Natur'opied l'objectif est de réaliser le Back-end complet 
 
 ## Todo 💻
 
-**Semaine 40 :** Finir le button supprimer du panier et le button quantité du showshop.🖱️
+**Semaine 40 :** Finir le button supprimer du panier .🖱️
 
 **Semaine 41:** Reste le ` token refresh ` sur la page buy du front📄
 
