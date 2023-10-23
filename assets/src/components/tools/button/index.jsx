@@ -1,14 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../../../../assets/css/styles.css"
+
 
 const Button = (props) => {
   return (
     <button
       type={props.type}
-      className={`text-black bg-white font-bold font-nunitoRegular  rounded-full flex flex-row uppercase px-2 py-2 w-36 justify-center items-center hover:bg-purple-950 hover:text-white hover:transition hover:ease-in-out hover:duration-200 ${props.className}lg:text-lg  lg:w-48 `}
+      className={` ${props.className}  button `}
+     
+  
       onClick={props.onClick}
     >
       {props.value}
+      
+      <div className="buttton-top"></div>
+      <div className="button-bottom"></div>
+      <div className="button-base"></div>
     </button>
   );
 };

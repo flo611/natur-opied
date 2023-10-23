@@ -41,7 +41,7 @@ class Card extends Component {
               <p>{description}</p>
               <br />
               <img src={icon} alt="logo" className="hover:scale-150" width={200} height={200} />
-              <div className="flex justify-center py-8  ">
+              <div className="flex justify-center py-8 text-2xl ">
                 <Button
                   value="En savoir +"
                   type="button"
@@ -75,12 +75,14 @@ class Card extends Component {
                   <BsDownload /> {" "}
                 </a>
               </div>
+              <div className="text-2xl">
               <Button
                 value="Retour"
                 type="button"
-                className="my-4 pt-2"
+                className="my-4 pt-2 "
                 onClick={this.handleClick}
               />
+              </div>
             </div>
           </div>
 

@@ -4,7 +4,7 @@ export let styles = {
     width: "34px",
     height: "28px",
     left: "20px",
-    top: "70px",
+    top: "20px",
   },
   bmBurgerBars: {
     background: "white",
@@ -26,7 +26,7 @@ export let styles = {
     width: "100%",
   },
   bmMenu: {
-    background: "black",
+    background: "#111827",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
   

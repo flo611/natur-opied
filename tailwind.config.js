@@ -14,5 +14,5 @@ module.exports = {
       shine: "url('https://naturopied.sabine-portfolio.fr/images/background.jpg')",
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

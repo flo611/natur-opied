@@ -166,8 +166,9 @@ const Buy = () => {
         }
         position="left-bottom"
       >
-        <form action="" className="card mx-6 lg:mx-40 lg:mt-6 ">
-          <div className="contain flex flex-col lg:mx-40 my-10 py-10">
+       
+        <form action="" className="card mx-6 lg:mx-60 lg:mt-6 ">
+          <div className="contain flex flex-col lg:mx-40 my-10 py-10 lg:px-20 ">
             <label className="text-white" htmlFor="">
               Name
             </label>
@@ -232,6 +233,7 @@ const Buy = () => {
             </div>
           </div>
         </form>
+        
       </Popup>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {

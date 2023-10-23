@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 const Introduction = () => {
   return (
-    <section className="mt-44 card mx-20">
-      <div className=" md:mx-12 lg:grid lg:grid-cols-2">
-        <div className=" flex flex-row w-full  my-10">
+    <section className="mt-20 card mx-20">
+      <div className="contain text-white lg:mx-20 my-10">
+      <div className="  md:mx-12 ">
+        <div className=" flex flex-row w-full  my-10 lg:text-2xl">
           <p>
             Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
             site sur la Nature avec des randonnées à effectuer sur le
@@ -23,12 +24,13 @@ const Introduction = () => {
           />
         </div>
       </div>
-      <div className=" py-6 font-bold flex justify-center mx-8 md:mx-12  underline">
+      <div className=" py-6  flex justify-center mx-8 md:mx-12  lg:text-2xl">
         Si vous voulez acheter des photos de mes balades ou de paysage rendez-vous sur la page shop ou en cliquant sur le boutton ci-dessous:
       </div>
-      <div className="flex justify-center my-4 ">
+      </div>
+      <div className="flex justify-center my-4 text-white text-2xl">
       <Link to={`/shop/`}>
-        <Button type="button" value="Buy Here" />
+        <Button type="button" value="Shop" />
         </Link>
       </div>
     </section>
