@@ -83,6 +83,8 @@ class Card extends Component {
               />
             </div>
           </div>
+
+          
         </>
       </ReactCardFlip>
     );

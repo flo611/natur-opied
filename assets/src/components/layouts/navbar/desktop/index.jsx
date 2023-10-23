@@ -5,6 +5,7 @@ import { useState } from "react";
 import { RiAdminLine } from "react-icons/ri";
 import { TbApi } from "react-icons/tb";
 import { IoSpeedometerOutline } from "react-icons/io5";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbardesktop = () => {
   const { basket } = useContext(CartContext);
@@ -39,14 +40,14 @@ const Navbardesktop = () => {
                 Destinations
                 {showDestinationsMenu && (
                 <ul className="absolute z-10 bg-black border divide-y  divide-gray-100 text-white rounded-lg shadow w-44 ">
-                <li>
-                  <Link to="/destinations" className="block px-4 py-2 hover:bg-purple-800  ">Europe</Link>
+                <li  className="block px-4 py-2 hover:bg-purple-800 ">
+                <Link to="/destinations" key="Europe">Europe</Link>
                 </li>
-                <li>
-                  <Link to="/destinations" className="block px-4 py-2  hover:bg-purple-800">USA</Link>
+                <li className="block px-4 py-2  hover:bg-purple-800" >
+                  <Link to="/destinations"  key="USA">USA</Link>
                 </li>
-                <li>
-                  <Link to="/destinations" className="block px-4 py-2  hover:bg-purple-800">Océanie</Link>
+                <li className="block px-4 py-2  hover:bg-purple-800" >
+                  <Link to="/destinations"  key="Oceanie">Océanie</Link>
                 </li>
               </ul>
                 )}

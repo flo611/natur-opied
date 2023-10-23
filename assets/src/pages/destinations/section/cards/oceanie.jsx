@@ -6,7 +6,7 @@ import Test from "./card";
 
 const Oceanie = () => {
   return (
-    <div>
+    <section id="Oceanie">
      <div className="flex w-full justify-center ">
         <img
   alt="Australia"
@@ -34,7 +34,7 @@ const Oceanie = () => {
         }
       })}
       </div>
-      </div>
+      </section>
   );
 };
 Oceanie.propTypes = {

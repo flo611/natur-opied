@@ -25,21 +25,16 @@
     "dev": "run-p dev:**",
     "dev:symfony": "symfony serve",
     "dev:react": "encore dev-server",
-    "prod": "sudo composer install && pnpm run prod:sequence",
-    "prod:sequence": "pnpm install && pnpm run prod:autoloader ",
-    "prod:autoloader": "composer install --no-dev --optimize-autoloader && npm run prod:warning",
-    "prod:warning": "echo Allow nodejs space with export NODE_OPTIONS=--max-old-space-size=1024 and run compile script",
-    "compile": "encore production --progress && npm run restart",
-    "restart": "sudo systemctl restart nginx && pnpm run restart:success",
-    "restart:success": "echo Success !",
+    "prod": "sudo composer install && pnpm run prod:node",
+    "prod:node": "pnpm install && pnpm run prod:autoloader ",
+    "prod:autoloader": "sudo composer install --no-dev --optimize-autoloader",
+    "prod:build": "encore production --progress",
     "packages": "composer install && npm install",
-    "encore": "encore dev",
-    "watch": "encore dev --watch",
-    "build": "encore production --progress",
-    "test": "echo Error: no test specified && exit 1"
+    "watch": "encore dev --watch"
   },
   "dependencies": {
     "@api-platform/admin": "^3.4.4",
+    "anchor-link": "^3.5.1",
     "axios": "^1.5.0",
     "country-flag-icons": "^1.5.7",
     "dotenv-webpack": "^8.0.1",
@@ -49,6 +44,7 @@
     "process": "^0.11.10",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-burger-menu": "^3.0.9",
     "react-card-flip": "^1.2.2",
     "react-dom": "^18.2.0",
@@ -56,6 +52,7 @@
     "react-icons": "^4.11.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.15.0",
+    "react-scroll": "^1.9.0",
     "reactjs-popup": "^2.0.6"
   }
 }
