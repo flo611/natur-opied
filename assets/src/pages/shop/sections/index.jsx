@@ -150,12 +150,7 @@ const Buy = () => {
   return (
     <>
       <h1 className="w-full flex justify-center text-white uppercase pt-20  font-bold  lg:text-3xl">
-        <img
-          alt="European Union"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/EU.svg"
-          width={100}
-          height={100}
-        />
+     Europe
       </h1>
       <Popup
         trigger={
@@ -419,12 +414,7 @@ const Buy = () => {
       </div>
 
       <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
-        <img
-          alt="United States"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
-          width={100}
-          height={100}
-        />
+        USA
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
@@ -602,12 +592,7 @@ const Buy = () => {
       </div>
 
       <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
-        <img
-          alt="Australia"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AU.svg"
-          width={100}
-          height={100}
-        />
+       Océanie
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {

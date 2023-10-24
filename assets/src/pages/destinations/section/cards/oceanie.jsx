@@ -8,12 +8,7 @@ const Oceanie = () => {
   return (
     <section id="Oceanie">
      <div className="flex w-full justify-center ">
-        <img
-  alt="Australia"
-  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AU.svg"
-  width={100}
-  height={100}/>
-
+<h1>Océanie</h1>
       </div>
       <div className="lg:grid lg:grid-cols-3">
       {data.map((element) => {

@@ -9,12 +9,7 @@ const Europe = () => {
   return (
     <section id="Europe">
       <div className="flex w-full justify-center pt-20">
-        <img
-          alt="European Union"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/EU.svg"
-          width={100}
-          height={100}
-        />
+    <h1>Europe</h1>
       </div>
       <div className="lg:grid lg:grid-cols-3">
         {data.map((element) => {
