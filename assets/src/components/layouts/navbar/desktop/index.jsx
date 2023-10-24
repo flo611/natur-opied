@@ -17,7 +17,7 @@ const Navbardesktop = () => {
  
       <div class="sm:hidden md:hidden lg:flex flex-wrap place-items-center text-2xl ">
         <section class="relative mx-auto">
-          <nav class="flex justify-between bg-gray-900 text-white w-screen">
+          <nav class="flex justify-between bg-gray-900 text-gray-500 w-screen">
             <div class="px-5 xl:px-12 py-6 flex w-full items-center">
               <img
                 src="/images/logos/black-logo.svg"
@@ -29,7 +29,7 @@ const Navbardesktop = () => {
               <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li>
                   <a
-                    class="hover:text-gray-200"
+                    className="hover:text-gray-200"
                     href="https://naturopied.sabine-portfolio.fr/"
                   >
                     Home
@@ -66,7 +66,7 @@ const Navbardesktop = () => {
                     </li>{" "}
                   </Link>
                 </li>
-                <li>
+                <li className="hover:text-gray-200">
                   {" "}
                   <Link to="/shop">Shop</Link>
                 </li>
