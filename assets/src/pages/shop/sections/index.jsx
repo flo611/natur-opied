@@ -149,12 +149,12 @@ const Buy = () => {
 
   return (
     <>
-      <h1 className="w-full flex justify-center text-white uppercase pt-20  font-bold  lg:text-3xl">
+      <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
      Europe
       </h1>
       <Popup
         trigger={
-          <button className="flex  justify-center text-4xl text-white w-full my-4 animate-bounce  ">
+          <button className="flex  justify-center text-4xl text-black w-full my-4 animate-bounce  ">
             {" "}
             <BiSolidImageAdd />
           </button>
