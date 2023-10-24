@@ -150,7 +150,7 @@ const Buy = () => {
   return (
     <>
       <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
-     Europe
+     Europe !!!!!
       </h1>
       <Popup
         trigger={
