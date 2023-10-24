@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "flowbite";
 import Button from "../../../../components/tools/button";
 
 

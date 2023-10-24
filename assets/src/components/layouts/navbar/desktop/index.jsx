@@ -5,7 +5,7 @@ import { useState } from "react";
 import { RiAdminLine } from "react-icons/ri";
 import { TbApi } from "react-icons/tb";
 import { IoSpeedometerOutline } from "react-icons/io5";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+
 import "../../../../../css/styles.css";
 
 const Navbardesktop = () => {
