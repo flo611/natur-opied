@@ -24,15 +24,19 @@ Encore
   .addEntry("app", "./assets/app.jsx")
   .addEntry("tailwind", "./assets/tailwind.js")
   .addEntry("styles", "./assets/css/styles.css")
+  // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
 
   //ENV VAR REACT
-.addPlugin(new Dotenv({
-    path: "./.env.local",
-    systemvars: true
-}))
-
-  // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
+  .addPlugin(
+    new Dotenv({
+      path: "./.env.local",
+      systemvars: true,
+    })
+  )
   .splitEntryChunks()
+
+  // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+  // .enableStimulusBridge("./assets/controllers.json")
 
   // will require an extra script tag for runtime.js
   // but, you probably want this, unless you're building a single-page app
@@ -70,7 +74,7 @@ Encore
 
   // uncomment if you use React
   .enableReactPreset()
-  //enable tailwind
+  // enable tailwind
   .enablePostCssLoader();
 
 // uncomment to get integrity="..." attributes on your script & link tags
@@ -79,5 +83,5 @@ Encore
 
 // uncomment if you're having problems with a jQuery plugin
 //.autoProvidejQuery()
-
 module.exports = Encore.getWebpackConfig();
+

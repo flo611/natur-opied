@@ -1,46 +1,93 @@
 import React from "react";
+import Home from "../../pages/home";
+import Destinations from "../../pages/destinations";
+
+// SHOP PAGE
+import Shop from "../../pages/shop";
+import ShowShop from "../../pages/shop/functions/showShop";
+
+// BASKET PAGE
+import Basket from "../../pages/panier";
+import Admin from "../../pages/admin";
+
+
+// DASHBOARD
+import Dashboard from "../../pages/dashboard";
+
+// CONTEXT
+import CartProvider from "../../components/context/cartProvider";
+
 import { createBrowserRouter } from "react-router-dom";
 
-import Book from "../../pages/book";
-import Home from "../../pages/home page";
-import PhantomBlood from "../../pages/phantomblood/";
-import BattleTendency from "../../pages/battletendency";
-import StardustCrusaders from "../../pages/stardustcrusaders";
-import Dashboard from "../../pages/dashboard";
-import TomeUn from "../../pages/phantomblood/tome1";
-import Read from "../../pages/read";
+
 
 export const Provider = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <>
+        <CartProvider>
+          <Home />
+        </CartProvider>
+      </>
+    ),
   },
   {
-    path: "/Book",
-    element: <Book />,
+    path: "/destinations",
+    element: (
+      <>
+        <CartProvider>
+          <Destinations />
+        </CartProvider>
+      </>
+    ),
   },
   {
-    path: "/phantomblood",
-    element: <PhantomBlood />,
+    path: "/shop",
+    element: (
+      <>
+        <CartProvider>
+          <Shop />
+        </CartProvider>
+      </>
+    ),
   },
   {
-    path: "/battletendency",
-    element: <BattleTendency />,
+    path: "/shop/:id",
+    element: (
+      <>
+        <CartProvider>
+          <ShowShop />
+        </CartProvider>
+      </>
+    ),
   },
   {
-    path: "/stardustcrusaders",
-    element: <StardustCrusaders />,
+    path: "/panier",
+    element: (
+      <>
+        <CartProvider>
+          <Basket />
+        </CartProvider>
+      </>
+    ),
   },
   {
-    path: "/profil",
-    element: <Dashboard />,
+    path: "/admin",
+    element: (
+      <>
+        <Admin />
+      </>
+    ),
   },
   {
-    path: "/phantomblood/diolenvahisseur",
-    element: <TomeUn />,
-  },
-  {
-    path: "/read",
-    element: <Read />,
+    path: "/dashboard",
+    element: (
+      <>
+        <CartProvider>
+          <Dashboard />
+        </CartProvider>
+      </>
+    ),
   },
 ]);

@@ -5,10 +5,14 @@ module.exports = {
     "./templates/**/*.html.twig",
   ],
   theme: {
-    extend: {},
+    extend: {
+      scale: {
+        200: "2.00",
+      },
+    },
     backgroundImage: {
-      "jojo": "url('http://localhost:8000/medias/background/jojo-font-back.png')",
-      "jojo-mobile": "url('http://localhost:8000/jojo-mobile.jpg')"
+      shine:
+        "url('https://naturopied.sabine-portfolio.fr/images/background.jpg')",
     },
   },
   plugins: [],

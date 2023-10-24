@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { Provider } from "./provider";
 
-
 const Router = () => {
   const container = document.getElementById("root");
   const root = createRoot(container);
@@ -13,4 +12,5 @@ const Router = () => {
     </>
   );
 };
+
 export default Router;
