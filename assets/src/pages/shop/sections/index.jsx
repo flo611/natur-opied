@@ -6,8 +6,8 @@ import { CartContext } from "../../../components/context/cartProvider";
 import { ImBin } from "react-icons/im";
 import { TfiWrite } from "react-icons/tfi";
 import { BiSolidImageAdd } from "react-icons/bi";
-// import Popup from "reactjs-popup";
-// import "reactjs-popup/dist/index.css";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const Buy = () => {
   const [posts, setPosts] = useState([]);
@@ -152,7 +152,7 @@ const Buy = () => {
       <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
      Europe !!!!!
       </h1>
-      {/* <Popup
+      <Popup
         trigger={
           <button className="flex  justify-center text-4xl text-black w-full my-4 animate-bounce  ">
             {" "}
@@ -229,7 +229,7 @@ const Buy = () => {
           </div>
         </form>
         
-      </Popup> */}
+      </Popup> 
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "Europe") {
@@ -305,7 +305,7 @@ const Buy = () => {
                           </>
                         ) : null}
                       </div>
-                      {/* <Popup
+                      <Popup
                         trigger={
                           <button className="text-2xl flex justify-center w-full pt-6">
                             {" "}
@@ -403,7 +403,7 @@ const Buy = () => {
                             </div>
                           </form>
                         </div>
-                      </Popup> */}
+                      </Popup>
                     </div>
                   </div>
                 </div>
@@ -483,7 +483,7 @@ const Buy = () => {
                           </>
                         ) : null}
                       </div>
-                      {/* <Popup
+                      <Popup
                         trigger={
                           <button className="text-2xl flex justify-center pt-6">
                             {" "}
@@ -581,7 +581,7 @@ const Buy = () => {
                             </div>
                           </form>
                         </div>
-                      </Popup> */}
+                      </Popup> 
                     </div>
                   </div>
                 </div>
@@ -662,7 +662,7 @@ const Buy = () => {
                           </>
                         ) : null}
                       </div>
-                      {/* <Popup
+                      <Popup
                         trigger={
                           <button className="text-2xl flex justify-center pt-6">
                             {" "}
@@ -760,7 +760,7 @@ const Buy = () => {
                             </div>
                           </form>
                         </div>
-                      </Popup> */}
+                      </Popup> 
                     </div>
                   </div>
                 </div>
