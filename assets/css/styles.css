@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bm-menu-wrap {
+  transition: "" !important;
+}
+
+.card {
+  background:#535353;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+  -15px -15px 30px rgb(60, 60, 60);;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contain {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 400px; /* Ajustez la largeur selon vos besoins */
+  height:400px;
+  margin: 0 auto;
+}
+
+.carouselimg {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
