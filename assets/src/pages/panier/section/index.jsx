@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import Button from "../../../components/tools/button";
 import { CartContext } from "../../../components/context/cartProvider";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
+// import Popup from "reactjs-popup";
+// import "reactjs-popup/dist/index.css";
 import { SlBasket } from "react-icons/sl";
 
 const Panier = () => {
@@ -122,7 +122,7 @@ const Panier = () => {
       </div>
       <div className="lg:flex lg:flex-row lg:w-full lg:justify-center ">
         <div className="flex justify-center my-8 pr-6">
-          <Popup
+          {/* <Popup
             trigger={
               <button className=" cursor-pointer transition-all bg-blue-500 text-white px-6  rounded-lg
               border-blue-600
@@ -154,7 +154,7 @@ const Panier = () => {
                 </div>
               </div>
             </div>
-          </Popup>
+          </Popup> */}
         </div>
 
         {basket.length === 0 ? null : (
