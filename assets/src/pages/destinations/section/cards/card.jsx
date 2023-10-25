@@ -36,17 +36,17 @@ class Card extends Component {
         flipDirection="horizontal"
       >
         <>
-          <div className="w-96 h-auto bg-gray-200 p-3 flex flex-col gap-1 rounded-2xl">
+          <div className="w-96 h-auto bg-gray-900 p-3 flex flex-col gap-1 rounded-2xl">
             <div className="flex justify-center">
               <img src={icon} alt="logo" className="h-48 rounded-xl" />
             </div>
             <div class="flex flex-col gap-4">
               <div class="flex flex-row justify-between">
                 <div class="flex flex-col">
-                  <span class="text-xl font-bold">{title}</span>
-                  <p class="text-xs text-gray-700 mt-2">{description}</p>
+                  <span class="text-xl text-gray-200 font-bold">{title}</span>
+                  <p class="text-xs text-gray-400 mt-2">{description}</p>
                 </div>
-                <span class="font-bold">{best}</span>
+                <span class="font-bold text-gray-200">{best}</span>
               </div>
               <div className="my-10 flex justify-center">
                 <Button
@@ -59,7 +59,7 @@ class Card extends Component {
           </div>
         </>
         <>
-          <div class="w-96 h-auto bg-gray-200 p-3 flex flex-col gap-1 rounded-2xl ">
+          <div class="w-96 h-auto bg-gray-900 p-3 flex flex-col gap-1 rounded-2xl ">
             <div>
               <img
                 src={photo}
@@ -70,10 +70,10 @@ class Card extends Component {
             <div class="flex flex-col gap-3">
               <div class="flex flex-row justify-between">
                 <div class="flex flex-col">
-                  <span class="text-xl font-bold ">{subtitle}</span>
-                  <p class="text-xs text-gray-700">{alldescription}</p>
+                  <span class="text-xl text-gray-200 font-bold ">{subtitle}</span>
+                  <p class="text-xs text-gray-400">{alldescription}</p>
                 
-                <div className="flex flex-row w-full justify-center my-4">
+                <div className="flex flex-row w-full justify-center text-gray-200 my-4">
                   <a
                     href={lien}
                     className="my-2 text-2xl mx-4 hover:text-gray-600"

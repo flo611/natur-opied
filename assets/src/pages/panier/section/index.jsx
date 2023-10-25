@@ -79,7 +79,21 @@ const Panier = () => {
         </svg>
       </h1>
       <div className="bg-gray-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 hover:shadow-2xl hover:bg-black transition-all duration-500 ease-in-out ">
-      <div class="uppercase tracking-wide  text-indigo-500 font-semibold flex justify-center pt-10">Panier!</div>
+      <div class="uppercase tracking-wide  text-gray-200 font-semibold flex justify-center pt-10">
+      <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg></div>
         <div className="  lg:my-10 lg:py-10 text-white ">
           <div className="grid grid-rows-1">
             {test.map((e) => {
@@ -91,16 +105,25 @@ const Panier = () => {
                         key={element.id}
                         className="w-full inline-flex justify-around text-gray-200"
                       >
-                        Qty: <br />{element.id}
+                        Qty : <br />{element.id}
                         <h1>Titre : <br /> {element.name}</h1>
                         <h1>Prix : <br /> {element.tarifs}€</h1>
+                       <div>Image :
+                        <br />
                         <img
+                        className="pt-2"
                           src={element.image}
                           width={50}
                           height={50}
                           alt="landscape"
+                        
                         />
+                        </div>
+                        <div> Delete :
+                          <br />
+                          <div className="pt-3">
                         <button
+                        className="bin flex justify-center  "
                           type="button"
                           value="X"
                           onClick={() => {
@@ -108,8 +131,10 @@ const Panier = () => {
                             window.localStorage.removeItem("total");
                           }}
                         >
-                          Delete X
+                          
                         </button>
+                        </div>
+                        </div>
                       </div>
                     );
                   })}
@@ -117,8 +142,10 @@ const Panier = () => {
               );
             })}
           </div>
+          
         </div>
-        <h1 className="flex justify-center text-2xl text-gray-200">
+        <hr className="pb-4 mx-20"/>
+        <h1 className="flex justify-center pb-4 text-2xl text-gray-200">
           Total = {total}€
         </h1>
       </div>

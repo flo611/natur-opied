@@ -226,7 +226,7 @@ const Buy = () => {
           if (post.destination === "Europe") {
             return (
               
-              <div className="card my-4 ">
+              <div className="  card my-4 ">
                 <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                   <div className="flex justify-center py-6">
@@ -287,13 +287,13 @@ const Buy = () => {
                         {adminFields.roles.includes("ROLE_ADMIN") ? (
                           <>
                             <button
-                              type="button"
-                              className="text-2xl"
+                              type="button "
+                              className="bin "
                               onClick={() => {
                                 handleDelete(post.id);
                               }}
                             >
-                              <ImBin />
+                              
                             </button>
                           </>
                         ) : null}
