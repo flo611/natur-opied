@@ -1,5 +1,4 @@
 import React from "react";
-import { US } from 'country-flag-icons/react/3x2'
 import data from "./data.json";
 import PropTypes, { element } from "prop-types";
 import Test from "./card";
