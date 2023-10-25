@@ -8,8 +8,6 @@ import ShowShop from "../../pages/shop/functions/showShop";
 
 // BASKET PAGE
 import Basket from "../../pages/panier";
-import Admin from "../../pages/admin";
-
 
 // DASHBOARD
 import Dashboard from "../../pages/dashboard";
@@ -18,8 +16,6 @@ import Dashboard from "../../pages/dashboard";
 import CartProvider from "../../components/context/cartProvider";
 
 import { createBrowserRouter } from "react-router-dom";
-
-
 
 export const Provider = createBrowserRouter([
   {
@@ -69,14 +65,6 @@ export const Provider = createBrowserRouter([
         <CartProvider>
           <Basket />
         </CartProvider>
-      </>
-    ),
-  },
-  {
-    path: "/admin",
-    element: (
-      <>
-        <Admin />
       </>
     ),
   },
