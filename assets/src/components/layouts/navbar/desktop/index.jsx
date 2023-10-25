@@ -14,7 +14,6 @@ const Navbardesktop = () => {
 
   return (
     <header>
- 
       <div class="sm:hidden md:hidden lg:flex flex-wrap place-items-center text-2xl ">
         <section class="relative mx-auto">
           <nav class="flex justify-between bg-gray-900 text-gray-500 w-screen">
@@ -73,9 +72,11 @@ const Navbardesktop = () => {
               </ul>
 
               <div className="hidden xl:flex items-center space-x-5 ">
-                <a className="hover:text-gray-200" href="http://localhost:8000/login">
-                <RiAdminLine />
-                  
+                <a
+                  className="hover:text-gray-200"
+                  href="http://localhost:8000/login"
+                >
+                  <RiAdminLine />
                 </a>
                 <a class="flex items-center hover:text-gray-200" href="/panier">
                   <svg
@@ -94,27 +95,24 @@ const Navbardesktop = () => {
                   </svg>
                   <span class="flex absolute -mt-5 ml-4">
                     <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-600 opacity-75"></span>
-                    <span > <sup>{basket.length}</sup></span>
+                    <span>
+                      {" "}
+                      <sup>{basket.length}</sup>
+                    </span>
                   </span>
                 </a>
-                <Link to="/admin#/products" className="flex items-center hover:text-gray-200">
-                <TbApi />
+
+                <Link
+                  to="/dashboard"
+                  className="flex items-center hover:text-gray-200"
+                >
+                  <IoSpeedometerOutline />
                 </Link>
-                <Link to="/dashboard" className="flex items-center hover:text-gray-200">
-                <IoSpeedometerOutline />
-                  
-                </Link>
-               
               </div>
             </div>
-
           </nav>
         </section>
       </div>
-
-   
-      
-     
     </header>
   );
 };
