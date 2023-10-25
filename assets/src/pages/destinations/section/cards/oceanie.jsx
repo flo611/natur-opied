@@ -8,7 +8,7 @@ const Oceanie = () => {
   return (
     <section id="Oceanie">
      <div className="flex w-full justify-center ">
-<h1>Océanie</h1>
+<h1 className="my-6">Océanie</h1>
       </div>
       <div className="lg:grid lg:grid-cols-3">
       {data.map((element) => {
@@ -23,6 +23,7 @@ const Oceanie = () => {
               photo={element.photo}
               lien={element.lien}
               gpx={element.gpx}
+              best={element.best}
               onClick={() => showContent(element)}
             />
           );

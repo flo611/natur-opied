@@ -9,7 +9,7 @@ const Europe = () => {
   return (
     <section id="Europe">
       <div className="flex w-full justify-center pt-20">
-    <h1>Europe</h1>
+    <h1 className="my-6">Europe</h1>
       </div>
       <div className="lg:grid lg:grid-cols-3">
         {data.map((element) => {
@@ -24,6 +24,7 @@ const Europe = () => {
                 photo={element.photo}
                 lien={element.lien}
                 gpx={element.gpx}
+                best={element.best}
                 onClick={() => showContent(element)}
               />
             );

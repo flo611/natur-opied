@@ -6,32 +6,34 @@
     "localisation":"Norvège",
     "date": "2020/2021",
     "goal": "abc",
-    "description": "Circuit  randonnée de 10 km à Flåm",
-    "alldescription":"Au départ du port de Flåm vous allez voir la cascade et le cour d'eau large du Fjord",
+    "description": "Circuit  randonnée de 10 km ",
+    "alldescription":"Au départ du port de Flåm en Norvège vous allez voir la cascade et le cour d'eau large du Fjord",
     "icon": "/images/flam.jpg",
     "lien": "https://www.openrunner.com/route-details/8743040",
     "gpx":"/gpx/flam-8743040-1697102327-250.gpx",
-    "photo":"/images/flamparcours.png"
+    "photo":"/images/flamparcours.png",
+    "best":"Coup de 💖"
   },
   {
     "id": 2,
     "title": "USA",
-    "subtitle": "",
+    "subtitle": "Los Angeles",
     "localisation":" Californie ",
     "date": "2020/2021",
     "goal": "abc",
-    "description": "Circuit de 23 km hauteur de Los Angeles ",
-    "alldescription":" Au départ de Hollywood Walk of Fame vous verez le  célèbre Hollywood Sign et Griffith Park ",
+    "description": "Circuit de 23 km hauteur  ",
+    "alldescription":" Au départ de Hollywood Walk of Fame à Los Angeles vous verez le  célèbre Hollywood Sign et Griffith Park ",
     "icon": "/images/losangeles.jpg",
     "lien": "https://www.openrunner.com/route-details/7692506",
     "gpx":"/gpx/hollywood_sign-7692506-1697121349-181.gpx",
-    "photo":"/images/griffithpark.png"
+    "photo":"/images/griffithpark.png",
+    "best":"Coup de 💖"
   },
   {
     "id": 3,
     "title": "Océanie",
     "subtitle": "",
-    "localisation":" new south wales ",
+    "localisation":" New South Wales ",
     "date": "2020/2021",
     "goal": "abc",
     "description": "Circuit de 5 km ",
@@ -39,20 +41,22 @@
     "icon": "/images/koala.jpg",
     "lien": "",
     "gpx":"",
-    "photo":""
+    "photo":"",
+    "best":""
   },
   {
     "id": 4,
     "title": "Europe",
-    "subtitle": "",
+    "subtitle": "Roche d'Oëtre",
     "localisation":"France",
     "date": "2020/2021",
     "goal": "abc",
-    "description": " Circuit randonnée de 10 km 'la Rouvre'",
-    "alldescription":" Randonnée au niveau du site classé  Espace Naturel Sensible au coeur de la Suisse Normande",
+    "description": " Circuit randonnée de 10 km ",
+    "alldescription":" Randonnée au niveau du site classé  Espace Naturel Sensible au coeur de la Suisse Normande à la Roche d'Oëtre",
     "icon": "/images/Rouvre.jpg",
     "lien": "https://flow.polar.com/shared/7e7a637532b952bb4fad33e536dbf6da",
     "gpx":"/gpx/florian_sabine_2023-06-03_11-14-06.GPX",
-    "photo":"/images/rochedoetre.png"
+    "photo":"/images/rochedoetre.png",
+    "best":"Coup de 💖"
   }
 ]

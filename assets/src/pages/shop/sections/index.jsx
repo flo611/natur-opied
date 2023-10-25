@@ -87,7 +87,7 @@ const Buy = () => {
 
   const config = {
     headers: {
-      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTc2OTc5MDUsImV4cCI6MTY5NzcwMTUwNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.gqwE9SHiM7iFthzzOVxKiX7ueVndmNfHCgh7mC2jl56dUBskpcOPYp22xAEJAjaAhf61xwicZ9eparHEhqwMITmaWbEnLy-dLOoT72hU9gn6nwgngyZmuKMWl1b1Qq7pB1x8ZwTme4OEbzlHHk9jlwPwsQFLrvaF86oB4KYDgLbqvYE0weDThMBTpFdxDD7Cw1Uzmvr8MRECVeiVehqg2-uXRDw8BErsSZt3kYeoz9VLTuoWk1n_io1J3W3oSBiXesYTopfKb2NrNwSDja2i8cKqBqvAOTKsDpzzmuuYbeSvZoVvwFLkbhQnayB2Lgku4QEYEnmkKNRW9RjoNZnAtQ`,
+      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTgyMzU5MzYsImV4cCI6MTY5ODIzOTUzNiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQG5hdHVyb3BpZWQuZnIifQ.a6uK7VniuY86lN33Fg_MAFrqchKxJA27EXMPRzuQWbBeCtnki1A4pNyfy5Hnf3eJN0FSkLdhZcehLBJ_lXm6Kn2ajht8uZpLFodKG_4-0FVCBAOs5CKEdV7tpDY5IFZzTpbqDDHHzyUfdBVbkX2xuWtJsEe3nHkVJSUtkTFgt6wvZ6-M3zo_Wt1obyGx0_v1uXTRC5XtAPPIz39AOvARsVeXK6kDEdbTX8svNVWxsECmDG6C3HPzieBvqSNXjosykybtCQqU94-IwNIpBeUyresetHNkxTRqdOfgkU14RMV-znFJD1OJE_EaVa-EvELDuu6u7xyWSvKjetPF-vK3VQ`,
     },
   };
   const [adminFields, setAdminFields] = useState({ roles: ["ROLE_ADMIN"] });
@@ -161,58 +161,48 @@ const Buy = () => {
         }
         position="left-bottom"
       >
-       
-        <form action="" className="card mx-6 lg:mx-60 lg:mt-6 ">
-          <div className="contain flex flex-col lg:mx-40 my-10 py-10 lg:px-20 ">
-            <label className="text-white" htmlFor="">
-              Name
-            </label>
+       <div class="flex flex-col items-center justify-center h-screen dark">
+  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+  <h2 class="text-2xl font-bold text-gray-200 mb-4">New Product</h2>
+        <form action="" className="flex flex-col">
             <input
+            placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="text"
               onChange={(event) =>
                 setNewPost({ ...newPost, name: event.target.value })
               }
             />
-            <label className="text-white" htmlFor="">
-              Image
-            </label>
+            
             <input
+            placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="text"
               onChange={(event) =>
                 setNewPost({ ...newPost, image: event.target.value })
               }
             />
-            <label className="text-white" htmlFor="">
-              Description
-            </label>
             <input
+            placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="text"
               onChange={(event) =>
                 setNewPost({ ...newPost, description: event.target.value })
               }
             />
-            <label className="text-white" htmlFor="">
-              All description
-            </label>
             <input
+            placeholder=" All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="text"
               onChange={(event) =>
                 setNewPost({ ...newPost, alldescription: event.target.value })
               }
             />
-            <label className="text-white" htmlFor="">
-              Tarifs
-            </label>
             <input
+              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="number"
               onChange={(event) =>
                 setNewPost({ ...newPost, tarifs: parseInt(event.target.value) })
               }
             />
-            <label className="text-white" htmlFor="">
-              Destination
-            </label>
             <input
+            placeholder="Destination" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
               type="text"
               onChange={(event) =>
                 setNewPost({ ...newPost, destination: event.target.value })
@@ -226,17 +216,22 @@ const Buy = () => {
                 onClick={() => handleAdd(newdata)}
               />
             </div>
-          </div>
         </form>
+        </div>
+        </div>
         
       </Popup> 
-      <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
+      <div className="flex flex-col mx-40 py-10 lg:mx-2  lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "Europe") {
             return (
-              <div className="card px-6 mx-12 my-4 lg:mx-12 lg:py-12">
-                <div className=" contain py-10 m-6 lg:mx-4 lg:py-16 text-white">
+              
+              <div className="card my-4 ">
+                <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
+                  <div className="flex justify-center py-6">
+                      <img src={post.image} alt="" width={80} height={80} />
+                    </div>
                     <p className="font-bold"> Nom:</p>
                     {post.name}
                     <br />
@@ -245,9 +240,7 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    <div className="flex justify-center py-6">
-                      <img src={post.image} alt="" width={80} height={80} />
-                    </div>
+                    
                     <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
                       <div className="mx-4 my-4">
                         <Link to={`/shop/${post.id}`}>
@@ -314,16 +307,15 @@ const Buy = () => {
                         }
                         position="right center"
                       >
-                        <div>
+                       <div class="flex flex-col items-center justify-center h-screen dark">
+  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
                           <form
                             action=""
-                            className="card mx-6 lg:mx-40 lg:mt-6 "
+                            className="flex flex-col"
                           >
-                            <div className="contain flex flex-col lg:mx-40 my-10 py-10">
-                              <label className="text-white" htmlFor="">
-                                Name
-                              </label>
                               <input
+                              placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -332,10 +324,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Image
-                              </label>
                               <input
+                               placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -344,10 +334,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Description
-                              </label>
                               <input
+                               placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -356,10 +344,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                All description
-                              </label>
-                              <input
+                              <textarea
+                              placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -368,10 +354,9 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Tarifs
-                              </label>
+                              
                               <input
+                              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="number"
                                 onChange={(event) =>
                                   setEditPost({
@@ -380,10 +365,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Destination
-                              </label>
                               <input
+                              placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -400,9 +383,11 @@ const Buy = () => {
                                   onClick={() => handlePut(post.id)}
                                 />
                               </div>
-                            </div>
+                            
                           </form>
                         </div>
+                        </div>
+                        
                       </Popup>
                     </div>
                   </div>
@@ -413,15 +398,15 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
+      <h1 className="w-full flex justify-center text-black uppercase pt-40  font-bold  lg:text-3xl">
         USA
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "USA") {
             return (
-              <div className="card px-6 mx-12 my-4 lg:mx-12 lg:py-12">
-                <div className=" contain py-10 m-6 lg:mx-4 lg:py-16 text-white">
+              <div className="card my-4 ">
+                <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                     <p className="font-bold"> Nom:</p>
                     {post.name}
@@ -492,16 +477,15 @@ const Buy = () => {
                         }
                         position="right center"
                       >
-                        <div>
+                        <div class="flex flex-col items-center justify-center h-screen dark">
+  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
                           <form
                             action=""
-                            className="card mx-6 lg:mx-40 lg:mt-6 "
+                            className="flex flex-col"
                           >
-                            <div className="contain flex flex-col lg:mx-40 my-10 py-10">
-                              <label className="text-white" htmlFor="">
-                                Name
-                              </label>
                               <input
+                              placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -510,10 +494,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Image
-                              </label>
                               <input
+                               placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -522,10 +504,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Description
-                              </label>
                               <input
+                               placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -534,10 +514,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                All description
-                              </label>
-                              <input
+                              <textarea
+                              placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -546,10 +524,9 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Tarifs
-                              </label>
+                              
                               <input
+                              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="number"
                                 onChange={(event) =>
                                   setEditPost({
@@ -558,10 +535,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Destination
-                              </label>
                               <input
+                              placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -578,8 +553,9 @@ const Buy = () => {
                                   onClick={() => handlePut(post.id)}
                                 />
                               </div>
-                            </div>
+                            
                           </form>
+                        </div>
                         </div>
                       </Popup> 
                     </div>
@@ -591,15 +567,15 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className="w-full flex justify-center text-white uppercase pt-40  font-bold  lg:text-3xl">
+      <h1 className="w-full flex justify-center text-black uppercase pt-40  font-bold  lg:text-3xl">
        Océanie
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "Océanie") {
             return (
-              <div className="card px-6 mx-12 my-4 lg:mx-12 lg:py-12">
-                <div className=" contain py-10 m-6 lg:mx-4 lg:py-16 text-white">
+              <div className="card my-4">
+                <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                     <p className="font-bold"> Nom:</p>
                     {post.name}
@@ -671,16 +647,15 @@ const Buy = () => {
                         }
                         position="right center"
                       >
-                        <div>
+                       <div class="flex flex-col items-center justify-center h-screen dark">
+  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
                           <form
                             action=""
-                            className="card mx-6 lg:mx-40 lg:mt-6 "
+                            className="flex flex-col"
                           >
-                            <div className="contain flex flex-col lg:mx-40 my-10 py-10">
-                              <label className="text-white" htmlFor="">
-                                Name
-                              </label>
                               <input
+                              placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -689,10 +664,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Image
-                              </label>
                               <input
+                               placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -701,10 +674,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Description
-                              </label>
                               <input
+                               placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -713,10 +684,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                All description
-                              </label>
-                              <input
+                              <textarea
+                              placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -725,10 +694,9 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Tarifs
-                              </label>
+                              
                               <input
+                              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="number"
                                 onChange={(event) =>
                                   setEditPost({
@@ -737,10 +705,8 @@ const Buy = () => {
                                   })
                                 }
                               />
-                              <label className="text-white" htmlFor="">
-                                Destination
-                              </label>
                               <input
+                              placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                 type="text"
                                 onChange={(event) =>
                                   setEditPost({
@@ -757,8 +723,9 @@ const Buy = () => {
                                   onClick={() => handlePut(post.id)}
                                 />
                               </div>
-                            </div>
+                            
                           </form>
+                        </div>
                         </div>
                       </Popup> 
                     </div>

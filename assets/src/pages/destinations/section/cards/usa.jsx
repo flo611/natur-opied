@@ -7,7 +7,7 @@ const Usa = () => {
   return (
     <section id="USA">
       <div className="flex w-full justify-center">
-   <h1>USA</h1>
+   <h1 className="my-6">USA</h1>
 
       </div>
       <div className="lg:grid lg:grid-cols-3">
@@ -23,6 +23,7 @@ const Usa = () => {
               photo={element.photo}
               lien={element.lien}
               gpx={element.gpx}
+              best={element.best}
               onClick={() => showContent(element)}
             />
           );

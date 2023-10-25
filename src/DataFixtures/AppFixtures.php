@@ -19,14 +19,14 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
-        // Création d'un user "normal"
+        
         $user = new User();
         $user->setEmail("user@naturopied.fr");
         $user->setPassword($this->userPasswordHasher->hashPassword($user, "user@naturopied.fr"));
         $user->setRoles(["ROLE_USER"]);
         $manager->persist($user);
 
-        // Création d'un user admin
+        
         $userAdmin = new User();
         $userAdmin->setEmail("admin@naturopied.fr");
         $userAdmin->setPassword($this->userPasswordHasher->hashPassword($userAdmin, "admin@naturopied.fr"));

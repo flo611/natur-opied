@@ -43,9 +43,8 @@ const Panier = () => {
   function removeDuplicates(arr) {
     const uniqueIds = [];
 
-    const unique = arr.filter((element ) => {
+    const unique = arr.filter((element) => {
       const isDuplicate = uniqueIds.includes(element.id);
-   
 
       if (!isDuplicate) {
         uniqueIds.push(element.id);
@@ -63,24 +62,25 @@ const Panier = () => {
 
   return (
     <>
-      <h1 className="w-full flex justify-center text-white text-4xl  font-bold  lg:py-20 lg:text-6xl">
-      <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-20 w-20"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+      <h1 className="w-full flex justify-center text-white text-4xl  font-bold   lg:text-6xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-20 w-20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
       </h1>
-      <div className="card mx-60">
-        <div className="contain lg:mx-40 lg:my-10 lg:py-10 text-white ">
+      <div className="bg-gray-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 hover:shadow-2xl hover:bg-black transition-all duration-500 ease-in-out ">
+      <div class="uppercase tracking-wide  text-indigo-500 font-semibold flex justify-center pt-10">Panier!</div>
+        <div className="  lg:my-10 lg:py-10 text-white ">
           <div className="grid grid-rows-1">
             {test.map((e) => {
               return (
@@ -89,11 +89,11 @@ const Panier = () => {
                     return (
                       <div
                         key={element.id}
-                        className="w-full inline-flex justify-around"
+                        className="w-full inline-flex justify-around text-gray-200"
                       >
-                        Qty:{element.id}
-                        <h1>Titre : {element.name}</h1>
-                        <h1>Prix : {element.tarifs}€</h1>
+                        Qty: <br />{element.id}
+                        <h1>Titre : <br /> {element.name}</h1>
+                        <h1>Prix : <br /> {element.tarifs}€</h1>
                         <img
                           src={element.image}
                           width={50}
@@ -108,7 +108,7 @@ const Panier = () => {
                             window.localStorage.removeItem("total");
                           }}
                         >
-                          X
+                          Delete X
                         </button>
                       </div>
                     );
@@ -118,33 +118,34 @@ const Panier = () => {
             })}
           </div>
         </div>
-        <h1 className="flex justify-center text-2xl text-white">Total = {total}€</h1>
+        <h1 className="flex justify-center text-2xl text-gray-200">
+          Total = {total}€
+        </h1>
       </div>
       <div className="lg:flex lg:flex-row lg:w-full lg:justify-center ">
         <div className="flex justify-center my-8 pr-6">
           <Popup
             trigger={
-              <button className=" cursor-pointer transition-all bg-blue-500 text-white px-6  rounded-lg
+              <button
+                className=" cursor-pointer transition-all bg-blue-500 text-white px-6  rounded-lg
               border-blue-600
               border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
-              active:border-b-[2px] active:brightness-90 active:translate-y-[2px]  " type="button">
+              active:border-b-[2px] active:brightness-90 active:translate-y-[2px]  "
+                type="button"
+              >
                 Valider le Panier
-               
               </button>
-                
             }
             position="top left"
           >
-         
-            <div className="card px-6 ">
-              <h1 className="flex  justify-center pt-10 font-bold uppercase">
-                Paiement
-              </h1>
-              <div className="contain  lg:px-20 lg:my-10 lg:py-6 flex flex-col items-center text-white ">
-                <h1 className=" uppercase">
+            <div class="flex flex-col items-center justify-center h-screen pt-40 dark">
+              <div class="w-full max-w-md bg-gray-900 rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-200 mb-4">Paiement</h2>
+
+                <h1 className=" uppercase text-gray-200">
                   Veuillez régler le montant ci-dessous:
                 </h1>
-                <p className="font-bold">Total = {total}€</p>
+                <p className="font-bold text-gray-200">Total = {total}€</p>
                 <div className="lg:flex lg:flex-row lg:w-full lg:justify-center lg:my-4 ">
                   <Button
                     type="button"
@@ -154,7 +155,7 @@ const Panier = () => {
                 </div>
               </div>
             </div>
-          </Popup> 
+          </Popup>
         </div>
 
         {basket.length === 0 ? null : (

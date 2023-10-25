@@ -35,42 +35,37 @@ const ShowShop = () => {
       <Main>
         <Navbardesktop />
         <NavbarMobile />
-        <h1 className="w-full flex justify-center text-white uppercase pt-6  font-bold  lg:pt-40 lg:text-3xl">
+        <h1 className="w-full flex justify-center text-black uppercase pt-6  font-bold  lg:pt-4 lg:text-3xl">
           Show shop
         </h1>
 
-        <div className="pt-40">
-          <div className="card py-20 mx-96  ">
-            <div className="contain flex flex-col items-center py-20 mx-20 text-white">
-              {products.name}
-
-              <div className="">
-                <img
-                  src={products.image}
-                  width={160}
-                  height={160}
-                  alt="photolandscape"
-                  className="my-6"
-                />
+        <div className="w-auto h-auto bg-gray-200 p-3 flex flex-col  justify-center mx-96   gap-1 rounded-2xl ">
+            <div className="flex justify-center ">
+              <img src={products.image} alt="logo" className="h-52  rounded-xl " />
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-row justify-between">
+                <div class="flex flex-col">
+                  <span class="text-xl font-bold">{products.name}</span>
+                  <p className="mt-2">{products.alldescription}</p>
+                  <p class=" text-gray-700 mt-2">{products.tarifs}€</p>
+                </div>
+                <span class="font-bold"></span>
               </div>
-              <div>
-                <p>{products.alldescription}</p>
-              </div>
-              <div>{products.tarifs} €</div>
-              <div className="mx-4 my-4">
-                <>
-                  <Button
+              <div className="my-10 flex justify-center">
+              <Button
                     type="button"
                     value="Buy Here"
                     onClick={() => {
                       updateCart(products, products.tarifs);
                     }}
                   />
-                </>
               </div>
             </div>
           </div>
-        </div>
+
+
+
       </Main>
       <Footer />
     </>
