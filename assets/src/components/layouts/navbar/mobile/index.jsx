@@ -17,9 +17,8 @@ const NavbarMobile = () => {
 
   return (
     <header className="fixed bottom-10 w-full flex justify-center z-50 ">
-      <div className="flex-col">
       <div className="button-container  flex flex-row justify-center w-full lg:hidden">
-       
+      
       <button className="button">
       <a
                     className=":text-gray-200"
@@ -90,12 +89,9 @@ const NavbarMobile = () => {
                 </Link>
       </button>
       
-    
-      <div>
-    
       </div>
-    </div>
-    </div>
+  
+    
     </header>
   );
 };

@@ -405,7 +405,7 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className=" flex flex-col items-center w-full   text-black uppercase pt-20  font-bold  lg:text-3xl">
+      <h1 className=" flex flex-col items-center w-full   text-black uppercase my-6  font-bold  lg:text-3xl">
       <US title="United States" width={100}/>
       </h1>
       <div className="flex flex-col items-center w-full   py-10  lg:mx-2 lg:grid lg:grid-cols-3">
@@ -579,7 +579,7 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
+      <h1 className="w-full flex justify-center text-black uppercase my-6  font-bold  lg:text-3xl">
       <AU title="Australia" width={100}/>
       </h1>
       <div className="flex flex-col items-center w-full lg:mx-2 lg:grid lg:grid-cols-3">
@@ -588,7 +588,7 @@ const Buy = () => {
             if (post.destination === "Océanie") {
               return (
                 <div className="card my-4 lg:my-6 lg:mx-20 ">
-                  <div className=" card2 text-white">
+                  <div className=" card2 text-white ">
                     <div key={post.id} className="px-5">
                     <div className="flex justify-center py-6">
                         <img src={post.image} alt="" width={80} height={80} />

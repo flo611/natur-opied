@@ -62,10 +62,8 @@ const Panier = () => {
 
   return (
     <>
-      <h1 className="w-full flex justify-center text-white text-4xl  font-bold   lg:text-6xl">
-      
-      </h1>
-      <div className="bg-neutral-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5  my-20 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-all duration-500 ease-in-out ">
+     <div >
+      <div className="bg-gray-900 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5  my-20 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-all duration-500 ease-in-out ">
       <div class="sm:my-6 uppercase tracking-wide  text-gray-200 font-semibold flex justify-center lg:pt-10">
       <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -188,6 +186,7 @@ const Panier = () => {
             </div>
           </>
         )}
+      </div>
       </div>
     </>
   );

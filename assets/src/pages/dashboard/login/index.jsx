@@ -4,7 +4,7 @@ import {CgProfile} from "react-icons/cg"
 const Login = () => {
     return(
         <>
-         <div class="flex flex-col items-center justify-center h-screen dark">
+         <div class="flex flex-col items-center justify-center h-screen dark bg-neutral-800">
   <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
   <h2 class="text-2xl font-bold text-gray-200 mb-4 flex flex-row justify-center">My Profil <CgProfile/>
  </h2>

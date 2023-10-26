@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../../../components/tools/button";
 import { Link } from "react-router-dom";
 import Carousel from "better-react-carousel";
-
+import TypeAnimations from "../../../../components/tools/typeAnimation";
 
 const Introduction = () => {
   return (
@@ -13,10 +13,11 @@ const Introduction = () => {
     Votre navigateur ne supporte pas la lecture de vidéos.
   </video>
   <div className="sm:top-10 absolute  lg:top-56 left-0 right-0 flex justify-center items-center">
-    <div className=" sm:flex sm:flex-col sm:items-center flex text-gray-200 text-center">
-      <span className="text-2xl font-bold">Bonjour et bienvenue sur le site Naturopied !<br/></span>
+    <div className=" sm:flex sm:flex-col sm:items-center flex text-amber-400 text-center">
+      
+      <span className="text-2xl font-bold"><TypeAnimations/><br/></span>
       <img src="/images/logos/black-logo.svg" width={200} height={200} alt="logonaturopied" />
-      <span className="font-bold pt-6">Vous allez découvrir un site sur la nature avec des randonnées à effectuer sur le territoire. Ainsi qu'une galerie de photos. Bonne balade !</span>
+      <span className="font-bold pt-6 text-xl">Vous allez découvrir un site sur la nature avec des randonnées à effectuer sur le territoire. Ainsi qu'une galerie de photos. Bonne balade !</span>
     </div>
   </div>
      </div>

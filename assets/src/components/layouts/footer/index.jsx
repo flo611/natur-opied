@@ -1,6 +1,8 @@
 import React from "react";
 import { BsGithub } from "react-icons/bs";
-import{IoEarth} from "react-icons/io5"
+import { IoEarth } from "react-icons/io5";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+import {CiLinkedin} from "react-icons/ci"
 const Footer = () => {
   return (
     <footer className="lg:w-full bg-gray-900 ">
@@ -26,31 +28,24 @@ const Footer = () => {
           </a>
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a href="https://www.openrunner.com/my-space/mobile-app-history" class="ml-3 text-gray-500 hover:text-gray-200">
-         <IoEarth/>
+          <a
+            href="https://www.openrunner.com/my-space/mobile-app-history"
+            class=" mt-1 text-2xl text-gray-500 hover:text-gray-200"
+          >
+            <IoEarth />
           </a>
-          <a href="https://github.com/flo611" className="ml-3 text-gray-500 hover:text-gray-200">
+          <a
+            href="https://github.com/flo611"
+            className="mx-6  mt-1 text-2xl text-gray-500 hover:text-gray-200"
+          >
             <BsGithub />
           </a>
           <a
-            class="ml-3 text-gray-500 hover:text-gray-200"
+            class=" mt-0.5 text-3xl text-gray-500 hover:text-gray-200"
             href="https://www.linkedin.com/in/florian-sabine/"
           >
-            <svg
-              fill="currentColor"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0"
-              class="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="none"
-                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-              ></path>
-              <circle cx="4" cy="4" r="2" stroke="none"></circle>
-            </svg>
+            
+            <CiLinkedin/>
           </a>
         </span>
       </div>
