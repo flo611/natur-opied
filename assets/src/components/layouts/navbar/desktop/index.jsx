@@ -46,17 +46,17 @@ const Navbardesktop = () => {
                       {showDestinationsMenu && (
                         <ul className="absolute z-10 bg-gray-900 border divide-y  divide-gray-100 text-white rounded-lg shadow w-44 ">
                           <li className="block px-4 py-2 hover:text-gray-200 ">
-                            <Link to="/destinations" key="Europe">
+                            <Link to="/destinations#Europe" key="Europe">
                               Europe
                             </Link>
                           </li>
                           <li className="block px-4 py-2  hover:text-gray-200 ">
-                            <Link to="/destinations" key="USA">
+                            <Link to="/destinations#USA" key="USA">
                               USA
                             </Link>
                           </li>
                           <li className="block px-4 py-2  hover:text-gray-200 ">
-                            <Link to="/destinations" key="Oceanie">
+                            <Link to="/destinations#Oceanie" key="Oceanie">
                               Océanie
                             </Link>
                           </li>

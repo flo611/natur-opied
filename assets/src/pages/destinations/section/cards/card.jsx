@@ -36,7 +36,7 @@ class Card extends Component {
         flipDirection="horizontal"
       >
         <>
-          <div className="w-96 h-auto bg-gray-900 p-3 flex flex-col gap-1 rounded-2xl">
+          <div className="w-96 mx-20 my-10 h-auto bg-neutral-800 p-3 flex flex-col  gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
             <div className="flex justify-center">
               <img src={icon} alt="logo" className="h-48 rounded-xl" />
             </div>
@@ -59,7 +59,7 @@ class Card extends Component {
           </div>
         </>
         <>
-          <div class="w-96 h-auto bg-gray-900 p-3 flex flex-col gap-1 rounded-2xl ">
+          <div class="w-96 mx-20 my-10 h-auto bg-neutral-800 p-3 flex flex-col gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
             <div>
               <img
                 src={photo}

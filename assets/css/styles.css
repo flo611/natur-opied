@@ -58,8 +58,8 @@
 }
 
 .bin {
-  --black: #000000;
-  --binbg: #e6e6e6;
+  --black:#FFFFFF;
+  --binbg: #1f2937;
   --width: 30px;
   --height: 30px;
   background-image: repeating-linear-gradient(to right, transparent, transparent 5px, var(--black) 5px, var(--black) 7px, transparent 7px);

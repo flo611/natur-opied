@@ -2,12 +2,13 @@ import React from "react";
 import data from "./data.json";
 import PropTypes, { element } from "prop-types";
 import Test from "./card";
+import { US } from 'country-flag-icons/react/3x2'
 
 const Usa = () => {
   return (
     <section id="USA">
       <div className="flex w-full justify-center">
-   <h1 className="my-6">USA</h1>
+      <US title="United States" className="my-6" width={100}/>
 
       </div>
       <div className="lg:grid lg:grid-cols-3">

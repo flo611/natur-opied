@@ -3,12 +3,13 @@ import React from "react";
 import data from "./data.json";
 import PropTypes, { element } from "prop-types";
 import Test from "./card";
+import {AU} from 'country-flag-icons/react/3x2'
 
 const Oceanie = () => {
   return (
     <section id="Oceanie">
      <div className="flex w-full justify-center ">
-<h1 className="my-6">Océanie</h1>
+     <AU title="Australia" className="my-6" width={100}/>
       </div>
       <div className="lg:grid lg:grid-cols-3">
       {data.map((element) => {

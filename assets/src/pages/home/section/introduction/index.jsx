@@ -1,55 +1,69 @@
 import React from "react";
 import Button from "../../../../components/tools/button";
 import { Link } from "react-router-dom";
-import Carousel from 'better-react-carousel'
+import Carousel from "better-react-carousel";
 
 const Introduction = () => {
   return (
-    <section className="mt-40   bg-gray-900 rounded-xl mx-10 my-60 text-gray-200">
-      <div className="  lg:mx-20 my-10">
-      <div className="  md:mx-12 ">
-        <div className=" flex flex-row w-full  my-10 lg:text-2xl">
-          <p>
-            Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
-            site sur la nature avec des randonnées à effectuer sur le
-            territoire.Ainsi qu'une galerie de photos. Bonne balade !
-          </p>
-   
-        </div>
-        <div className="flex justify-center">
-          <img
-            src="/images/logos/black-logo.svg"
-            alt="logo"
-            width={160}
-            height={160}
-          />
-        </div>
-      </div>
+    <section>
+      <div class=" w-100  h-100 mx-40 my-40 py-20 bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
+        <p class="font-bold m-2">
+          {" "}
+          Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
+          site sur la nature avec des randonnées à effectuer sur le
+          territoire.Ainsi qu'une galerie de photos. Bonne balade !
+        </p>
 
-      <Carousel cols={2} rows={1} gap={10} loop>
-      <Carousel.Item>
-        <img width="100%"  src="/images/flam.jpg" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img width="100%" src="/images/bluemoutains.jpg" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img width="100%" src="/images/koala.jpg" />
-      </Carousel.Item>
-      <Carousel.Item>
-      <img width="100%" src="/images/losangeles.jpg" />
-      </Carousel.Item>
-      {/* ... */}
-    </Carousel>
+        <div class="  bg-neutral-800 hover:bg-gray-900 rounded-2xl">
+          {" "}
+          <Carousel cols={3} rows={1} gap={10} loop={true} autoPlay={2000}>
+            <Carousel.Item>
+              <img
+                width="full"
+                className="h-full"
+                src="/images/flam.jpg"
+                alt="flam"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                width="100%"
+                className=""
+                src="/images/Etang.jpg"
+                alt="boisroger"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width="100%" src="/images/koala.jpg" alt="koala" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width="100%" src="/images/losangeles.jpg" alt="losangeles" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width="100%" src="/images/background.jpg" alt="australie" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img width="100%" src="/images/cap.jpg" alt="cap" />
+            </Carousel.Item>
+            {/* ... */}
+          </Carousel>
+        </div>
 
-      <div className=" py-6  flex justify-center mx-8 md:mx-12  lg:text-2xl">
-        Si vous voulez acheter des photos de mes balades ou de paysage rendez-vous sur la page shop ou en cliquant sur le boutton ci-dessous:
-      </div>
-      </div>
-      <div className="flex justify-center my-4 text-white text-2xl">
-      <Link to={`/shop/`}>
-        <Button type="button" value="Shop" className="my-6" />
-        </Link>
+        <p class="mx-2 my-4">
+          {" "}
+          Si vous voulez acheter des photos de mes balades ou de paysage
+          rendez-vous sur la page shop ou en cliquant sur le boutton ci-dessous:
+        </p>
+
+        <div className="flex w-full justify-center">
+          <Link to={`/shop/`}>
+            <Button
+              type="button"
+              value="Shop"
+              className="my-6 flex justify-center"
+            />
+          </Link>
+        </div>
       </div>
     </section>
   );

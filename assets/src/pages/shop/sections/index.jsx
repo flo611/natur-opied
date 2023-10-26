@@ -8,6 +8,9 @@ import { TfiWrite } from "react-icons/tfi";
 import { BiSolidImageAdd } from "react-icons/bi";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import { US } from 'country-flag-icons/react/3x2'
+import { EU } from 'country-flag-icons/react/3x2'
+import {AU} from 'country-flag-icons/react/3x2'
 
 const Buy = () => {
   const [posts, setPosts] = useState([]);
@@ -150,11 +153,12 @@ const Buy = () => {
   return (
     <>
       <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
-     Europe !!!!!
+     
+      <EU title="European Union" width={100}/>
       </h1>
       <Popup
         trigger={
-          <button className="flex  justify-center text-4xl text-black w-full my-4 animate-bounce  ">
+          <button className="flex  justify-center text-4xl text-gray-200 w-full my-4 animate-bounce  ">
             {" "}
             <BiSolidImageAdd />
           </button>
@@ -226,7 +230,7 @@ const Buy = () => {
           if (post.destination === "Europe") {
             return (
               
-              <div className="  card my-4 ">
+              <div className="  card my-4 mx-20 ">
                 <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                   <div className="flex justify-center py-6">
@@ -244,7 +248,7 @@ const Buy = () => {
                     <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
                       <div className="mx-4 my-4">
                         <Link to={`/shop/${post.id}`}>
-                          <Button type="button" value="En savoir +" />
+                          <Button type="button" value="En savoir plus" />
                         </Link>
                       </div>
                       <div className="mx-4 my-4 ">
@@ -283,7 +287,8 @@ const Buy = () => {
                           -
                         </button>
                       </div>
-                      <div className="flex flex-row">
+                      <div className="opacity-0 hover:opacity-100 ">
+                      <div className="flex flex-row ">
                         {adminFields.roles.includes("ROLE_ADMIN") ? (
                           <>
                             <button
@@ -304,6 +309,7 @@ const Buy = () => {
                             {" "}
                             <TfiWrite />
                           </button>
+                          
                         }
                         position="right center"
                       >
@@ -390,6 +396,7 @@ const Buy = () => {
                         
                       </Popup>
                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -398,14 +405,14 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className="w-full flex justify-center text-black uppercase pt-40  font-bold  lg:text-3xl">
-        USA
+      <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
+      <US title="United States" width={100}/>
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "USA") {
             return (
-              <div className="card my-4 ">
+              <div className="card lg:my-4 lg:mx-20 ">
                 <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                     <p className="font-bold"> Nom:</p>
@@ -453,12 +460,14 @@ const Buy = () => {
                           -
                         </button>
                       </div>
+                      <div className="opacity-0 hover:opacity-100 ">
                       <div className="flex flex-row">
+                     
                         {adminFields.roles.includes("ROLE_ADMIN") ? (
                           <>
                             <button
                               type="button"
-                              className="text-2xl"
+                              className="text-2xl "
                               onClick={() => {
                                 handleDelete(post.id);
                               }}
@@ -558,6 +567,8 @@ const Buy = () => {
                         </div>
                         </div>
                       </Popup> 
+
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -567,14 +578,14 @@ const Buy = () => {
         })}
       </div>
 
-      <h1 className="w-full flex justify-center text-black uppercase pt-40  font-bold  lg:text-3xl">
-       Océanie
+      <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
+      <AU title="Australia" width={100}/>
       </h1>
       <div className="flex flex-col mx-40 py-10 lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "Océanie") {
             return (
-              <div className="card my-4">
+              <div className="card lg:my-4 lg:mx-20">
                 <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
                     <p className="font-bold"> Nom:</p>
@@ -623,6 +634,7 @@ const Buy = () => {
                           -
                         </button>
                       </div>
+                      <div className="opacity-0 hover:opacity-100 ">
                       <div className="flex flex-row">
                         {adminFields.roles.includes("ROLE_ADMIN") ? (
                           <>
@@ -728,6 +740,7 @@ const Buy = () => {
                         </div>
                         </div>
                       </Popup> 
+                    </div>
                     </div>
                   </div>
                 </div>

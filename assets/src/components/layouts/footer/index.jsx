@@ -3,7 +3,7 @@ import { BsGithub } from "react-icons/bs";
 import{IoEarth} from "react-icons/io5"
 const Footer = () => {
   return (
-    <footer>
+    <footer className="w-full bg-gray-900 ">
       <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col bg-gray-900">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <img
