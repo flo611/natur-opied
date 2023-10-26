@@ -1,10 +1,10 @@
 export let styles = {
   bmBurgerButton: {
-    position: "absolute",
-    width: "34px",
-    height: "28px",
+    position: "fixed",
+    width: "36px",
+    height: "30px",
     left: "20px",
-    top: "20px",
+    top: "25px",
   },
   bmBurgerBars: {
     background: "white",
@@ -21,15 +21,16 @@ export let styles = {
   },
   bmMenuWrap: {
     position: "fixed",
-    top: "0px",
     height: "100%",
     width: "100%",
+    top: "0px",
   },
   bmMenu: {
+    height: "100%",
+    width: "100%",
     background: "#111827",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
-  
   },
   bmMorphShape: {
     fill: "#373a47",
@@ -49,3 +50,4 @@ export let styles = {
     background: "transparent",
   },
 };
+export default styles;

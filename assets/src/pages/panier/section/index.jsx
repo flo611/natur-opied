@@ -65,8 +65,8 @@ const Panier = () => {
       <h1 className="w-full flex justify-center text-white text-4xl  font-bold   lg:text-6xl">
       
       </h1>
-      <div className="bg-gray-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5 hover:shadow-2xl my-20 hover:bg-black transition-all duration-500 ease-in-out ">
-      <div class="uppercase tracking-wide  text-gray-200 font-semibold flex justify-center pt-10">
+      <div className="bg-neutral-800 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5  my-20 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-all duration-500 ease-in-out ">
+      <div class="sm:my-6 uppercase tracking-wide  text-gray-200 font-semibold flex justify-center lg:pt-10">
       <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-10 w-10"
@@ -131,7 +131,7 @@ const Panier = () => {
           </div>
           
         </div>
-        <hr className="pb-4 mx-20"/>
+        <hr className="sm:my-4 sm:mx-16 lg:my-6 lg:mx-20"/>
         <h1 className="flex justify-center pb-4 text-2xl text-gray-200">
           Total = {total}€
         </h1>
@@ -141,7 +141,7 @@ const Panier = () => {
           <Popup
             trigger={
               <button
-                className=" cursor-pointer transition-all bg-blue-500 text-white px-6 my-16 rounded-lg
+                className="sm:px-4 sm:py-2 cursor-pointer transition-all bg-blue-500 text-white lg:px-6 lg:my-16 rounded-lg
               border-blue-600 
               border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
               active:border-b-[2px] active:brightness-90 active:translate-y-[2px]  "
@@ -174,7 +174,7 @@ const Panier = () => {
 
         {basket.length === 0 ? null : (
           <>
-            <div className="flex justify-center my-16 m  opacity-50">
+            <div className="sm:my-10 sm:pr-4 sm:flex sm:flex-col items-center lg:flex lg:justify-center lg:my-16   opacity-50">
               <Button
                 type="button"
                 value="Vider le panier"

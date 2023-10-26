@@ -7,12 +7,13 @@ import Footer from "../../components/layouts/footer";
 
 const Home = () => {
   return (
-    <Main>
+    <>
       <NavbarMobile/>
       <Navbardesktop/>
       <Introduction />
+      
       <Footer/>
-    </Main>
+    </>
   );
 };
 

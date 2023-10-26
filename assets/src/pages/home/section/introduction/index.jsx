@@ -3,17 +3,21 @@ import Button from "../../../../components/tools/button";
 import { Link } from "react-router-dom";
 import Carousel from "better-react-carousel";
 
+
 const Introduction = () => {
   return (
     <section>
-      <div class=" w-100  h-100 mx-40 my-40 py-20 bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
+    <div>
+      <img src="/images/background.jpg" alt="background" />
+     </div>
+      <div class=" w-100  h-100    bg-neutral-800  text-neutral-300 p-4 flex flex-col items-start justify-center gap-3 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
         <p class="font-bold m-2">
           {" "}
-          Bonjour et bienvenue sur le site Naturopied ! Vous allez découvrir un
+          <span className="flex justify-center py-6  text-2xl">Bonjour et bienvenue sur le site Naturopied !<br/></span> Vous allez découvrir un
           site sur la nature avec des randonnées à effectuer sur le
           territoire.Ainsi qu'une galerie de photos. Bonne balade !
         </p>
-
+      
         <div class="  bg-neutral-800 hover:bg-gray-900 rounded-2xl">
           {" "}
           <Carousel cols={3} rows={1} gap={10} loop={true} autoPlay={2000}>
@@ -48,7 +52,7 @@ const Introduction = () => {
             {/* ... */}
           </Carousel>
         </div>
-
+       
         <p class="mx-2 my-4">
           {" "}
           Si vous voulez acheter des photos de mes balades ou de paysage
@@ -65,6 +69,7 @@ const Introduction = () => {
           </Link>
         </div>
       </div>
+      
     </section>
   );
 };

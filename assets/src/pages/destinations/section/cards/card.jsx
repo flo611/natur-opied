@@ -36,7 +36,7 @@ class Card extends Component {
         flipDirection="horizontal"
       >
         <>
-          <div className="w-96 mx-20 my-10 h-auto bg-neutral-800 p-3 flex flex-col  gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
+          <div className="sm:mx-80 sm:my-6 md:mx-72 md:my-10 lg:w-96 lg:mx-20 lg:my-10 lg:h-auto bg-neutral-800 p-3  flex flex-col  gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
             <div className="flex justify-center">
               <img src={icon} alt="logo" className="h-48 rounded-xl" />
             </div>
@@ -59,12 +59,12 @@ class Card extends Component {
           </div>
         </>
         <>
-          <div class="w-96 mx-20 my-10 h-auto bg-neutral-800 p-3 flex flex-col gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
+          <div class="sm:mx-80 sm:my-6 md:mx-72 md:my-10 lg:w-96 lg:mx-20 lg:my-10 lg:h-auto bg-neutral-800 p-3 flex flex-col gap-1 rounded-2xl hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 ">
             <div>
               <img
                 src={photo}
                 alt="profil parcours"
-                className="hover:scale-150 rounded-xl h-48"
+                className="hover:scale-150 rounded-xl h-48 flex justify-center w-full"
               />
             </div>
             <div class="flex flex-col gap-3">

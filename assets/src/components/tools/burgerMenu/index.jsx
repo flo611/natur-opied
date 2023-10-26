@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 import { TbApi } from "react-icons/tb";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { RiAdminLine } from "react-icons/ri";
+
+
 const MenuHamburger = () => {
+
   return (
-    <Menu styles={styles}>
-      <div className=" w-full fixed flex flex-row items-center list-none text-white">
+    <Menu styles={styles} >
+      <div className=" w-full Z-50 flex flex-row items-center list-none text-white">
         <div className="">
           <img
             src="/images/logos/black-logo.svg"
