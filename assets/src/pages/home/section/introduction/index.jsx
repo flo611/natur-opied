@@ -7,20 +7,23 @@ import Carousel from "better-react-carousel";
 const Introduction = () => {
   return (
     <section>
-    <div>
-      <img src="/images/background.jpg" alt="background" />
+    <div className="w-full " >
+    <video autoPlay loop muted className="w-full h-auto">
+    <source   src="/video/intro.mp4" type="video/mp4"></source>
+    Votre navigateur ne supporte pas la lecture de vidéos.
+  </video>
+  <div className="sm:top-10 absolute  lg:top-56 left-0 right-0 flex justify-center items-center">
+    <div className=" sm:flex sm:flex-col sm:items-center flex text-gray-200 text-center">
+      <span className="text-2xl font-bold">Bonjour et bienvenue sur le site Naturopied !<br/></span>
+      <img src="/images/logos/black-logo.svg" width={200} height={200} alt="logonaturopied" />
+      <span className="font-bold pt-6">Vous allez découvrir un site sur la nature avec des randonnées à effectuer sur le territoire. Ainsi qu'une galerie de photos. Bonne balade !</span>
+    </div>
+  </div>
      </div>
-      <div class=" w-100  h-100    bg-neutral-800  text-neutral-300 p-4 flex flex-col items-start justify-center gap-3 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-shadow">
-        <p class="font-bold m-2">
+      <div className=" w-100  h-full  sm:py-40 lg:py-20 bg-neutral-800  text-neutral-300 p-4 flex flex-col items-start justify-center gap-3 ">
+        <div className="  bg-neutral-800 ">
           {" "}
-          <span className="flex justify-center py-6  text-2xl">Bonjour et bienvenue sur le site Naturopied !<br/></span> Vous allez découvrir un
-          site sur la nature avec des randonnées à effectuer sur le
-          territoire.Ainsi qu'une galerie de photos. Bonne balade !
-        </p>
-      
-        <div class="  bg-neutral-800 hover:bg-gray-900 rounded-2xl">
-          {" "}
-          <Carousel cols={3} rows={1} gap={10} loop={true} autoPlay={2000}>
+          <Carousel cols={3} rows={1} gap={10} loop={true} autoPlay>
             <Carousel.Item>
               <img
                 width="full"
@@ -53,7 +56,7 @@ const Introduction = () => {
           </Carousel>
         </div>
        
-        <p class="mx-2 my-4">
+        <p class="flex w-full justify-center my-4">
           {" "}
           Si vous voulez acheter des photos de mes balades ou de paysage
           rendez-vous sur la page shop ou en cliquant sur le boutton ci-dessous:
