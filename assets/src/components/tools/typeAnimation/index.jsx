@@ -15,6 +15,7 @@ const TypeAnimations = () => {
       speed={40}
       style={{ display: "contents" }}
       repeat={Infinity}
+      className=""
     />
   );
 };

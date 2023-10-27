@@ -8,9 +8,11 @@ import { TfiWrite } from "react-icons/tfi";
 import { BiSolidImageAdd } from "react-icons/bi";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { US } from 'country-flag-icons/react/3x2'
-import { EU } from 'country-flag-icons/react/3x2'
-import {AU} from 'country-flag-icons/react/3x2'
+import { US } from "country-flag-icons/react/3x2";
+import { EU } from "country-flag-icons/react/3x2";
+import { AU } from "country-flag-icons/react/3x2";
+import {PiMagnifyingGlassBold} from "react-icons/pi"
+import {PiShoppingCartBold} from "react-icons/pi";
 
 const Buy = () => {
   const [posts, setPosts] = useState([]);
@@ -153,8 +155,7 @@ const Buy = () => {
   return (
     <>
       <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
-     
-      <EU title="European Union" width={100}/>
+        <EU title="European Union" width={100} />
       </h1>
       <Popup
         trigger={
@@ -165,76 +166,83 @@ const Buy = () => {
         }
         position="left-bottom"
       >
-       <div class=" flex flex-col items-center justify-center h-screen dark">
-  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-  <h2 class="text-2xl font-bold text-gray-200 mb-4">New Product</h2>
-        <form action="" className="flex flex-col">
-            <input
-            placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="text"
-              onChange={(event) =>
-                setNewPost({ ...newPost, name: event.target.value })
-              }
-            />
-            
-            <input
-            placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="text"
-              onChange={(event) =>
-                setNewPost({ ...newPost, image: event.target.value })
-              }
-            />
-            <input
-            placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="text"
-              onChange={(event) =>
-                setNewPost({ ...newPost, description: event.target.value })
-              }
-            />
-            <input
-            placeholder=" All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="text"
-              onChange={(event) =>
-                setNewPost({ ...newPost, alldescription: event.target.value })
-              }
-            />
-            <input
-              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="number"
-              onChange={(event) =>
-                setNewPost({ ...newPost, tarifs: parseInt(event.target.value) })
-              }
-            />
-            <input
-            placeholder="Destination" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-              type="text"
-              onChange={(event) =>
-                setNewPost({ ...newPost, destination: event.target.value })
-              }
-            />
-
-            <div className="flex justify-center mt-4">
-              <Button
-                type="button"
-                value="Envoyer"
-                onClick={() => handleAdd(newdata)}
+        <div class=" flex flex-col items-center justify-center h-screen dark">
+          <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-200 mb-4">New Product</h2>
+            <form action="" className="flex flex-col">
+              <input
+                placeholder=" Name"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="text"
+                onChange={(event) =>
+                  setNewPost({ ...newPost, name: event.target.value })
+                }
               />
-            </div>
-        </form>
+
+              <input
+                placeholder=" Image"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="text"
+                onChange={(event) =>
+                  setNewPost({ ...newPost, image: event.target.value })
+                }
+              />
+              <input
+                placeholder=" Description"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="text"
+                onChange={(event) =>
+                  setNewPost({ ...newPost, description: event.target.value })
+                }
+              />
+              <input
+                placeholder=" All Description"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="text"
+                onChange={(event) =>
+                  setNewPost({ ...newPost, alldescription: event.target.value })
+                }
+              />
+              <input
+                placeholder="Tarifs"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="number"
+                onChange={(event) =>
+                  setNewPost({
+                    ...newPost,
+                    tarifs: parseInt(event.target.value),
+                  })
+                }
+              />
+              <input
+                placeholder="Destination"
+                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="text"
+                onChange={(event) =>
+                  setNewPost({ ...newPost, destination: event.target.value })
+                }
+              />
+
+              <div className="flex justify-center mt-4">
+                <Button
+                  type="button"
+                  value="Envoyer"
+                  onClick={() => handleAdd(newdata)}
+                />
+              </div>
+            </form>
+          </div>
         </div>
-        </div>
-        
-      </Popup> 
+      </Popup>
       <div className=" flex flex-col items-center w-full   py-10 lg:mx-2  lg:grid lg:grid-cols-3">
         {posts.map((post) => {
           if (post.destination === "Europe") {
             return (
-              
-              <div className=" card  my-4 lg:my-6 lg:mx-20 ">
-                <div className=" card2  text-white">
+              <div className=" card  my-4 lg:my-6  lg:mx-20 ">
+                <div className=" card2   text-white">
                   <div key={post.id} className="px-5">
-                  <div className="flex justify-center py-6">
-                      <img src={post.image} alt="" width={80} height={80} />
+                    <div className="flex justify-center py-6">
+                      <img src={post.image} alt="" width={150} height={150} />
                     </div>
                     <p className="font-bold"> Nom:</p>
                     {post.name}
@@ -244,24 +252,27 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    
-                    <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
-                      <div className="mx-4 my-4">
+                    <div className="flex flex-row items-center justify-center  lg:flex lg:flex-row ">
+                      <div className="mx-4 my-4 text-xl">
                         <Link to={`/shop/${post.id}`}>
-                          <Button type="button" value="En savoir plus" />
+                          {/* <Button type="button" value="En savoir plus" /> */}
+                          <PiMagnifyingGlassBold/>
                         </Link>
                       </div>
                       <div className="mx-4 my-4 ">
-                        <Button
+                        <button
                           type="button"
                           value="Ajouter panier"
                           onClick={() => {
                             updateCart(
                               post,
                               post.tarifs * productQuantities[post.id] || 5
-                            );
-                          }}
-                        />
+                              );
+                            }}
+                            
+                            >
+                            <PiShoppingCartBold/>
+                            </button>
                       </div>
                       <div className=" lg:flex lg:flex-row lg:justify-center my-4">
                         <button
@@ -288,114 +299,114 @@ const Buy = () => {
                         </button>
                       </div>
                       <div className="lg:opacity-0 lg:hover:opacity-100 ">
-                      <div className="flex flex-row ">
-                        {adminFields.roles.includes("ROLE_ADMIN") ? (
-                          <>
-                            <button
-                              type="button "
-                              className="bin "
-                              onClick={() => {
-                                handleDelete(post.id);
-                              }}
-                            >
-                              
+                        <div className="flex flex-row ">
+                          {adminFields.roles.includes("ROLE_ADMIN") ? (
+                            <>
+                              <button
+                                type="button "
+                                className="bin "
+                                onClick={() => {
+                                  handleDelete(post.id);
+                                }}
+                              ></button>
+                            </>
+                          ) : null}
+                        </div>
+                        <Popup
+                          trigger={
+                            <button className="text-2xl flex justify-center w-full pt-6">
+                              {" "}
+                              <TfiWrite />
                             </button>
-                          </>
-                        ) : null}
-                      </div>
-                      <Popup
-                        trigger={
-                          <button className="text-2xl flex justify-center w-full pt-6">
-                            {" "}
-                            <TfiWrite />
-                          </button>
-                          
-                        }
-                        position="right center"
-                      >
-                       <div class="flex flex-col items-center justify-center h-screen dark">
-  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
-                          <form
-                            action=""
-                            className="flex flex-col"
-                          >
-                              <input
-                              placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    name: event.target.value,
-                                  })
-                                }
-                              />
-                              <input
-                               placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    image: event.target.value,
-                                  })
-                                }
-                              />
-                              <input
-                               placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    description: event.target.value,
-                                  })
-                                }
-                              />
-                              <textarea
-                              placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    alldescription: event.target.value,
-                                  })
-                                }
-                              />
-                              
-                              <input
-                              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="number"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    tarifs: parseInt(event.target.value),
-                                  })
-                                }
-                              />
-                              <input
-                              placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    destination: event.target.value,
-                                  })
-                                }
-                              />
-
-                              <div className="flex justify-center mt-4">
-                                <Button
-                                  type="button"
-                                  value="Valider"
-                                  onClick={() => handlePut(post.id)}
+                          }
+                          position="right center"
+                        >
+                          <div class="flex flex-col items-center justify-center h-screen dark">
+                            <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+                              <h2 class="text-2xl font-bold text-gray-200 mb-4">
+                                Edit product
+                              </h2>
+                              <form action="" className="flex flex-col">
+                                <input
+                                  placeholder=" Name"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      name: event.target.value,
+                                    })
+                                  }
                                 />
-                              </div>
-                            
-                          </form>
-                        </div>
-                        </div>
-                        
-                      </Popup>
-                    </div>
+                                <input
+                                  placeholder=" Image"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      image: event.target.value,
+                                    })
+                                  }
+                                />
+                                <input
+                                  placeholder=" Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      description: event.target.value,
+                                    })
+                                  }
+                                />
+                                <textarea
+                                  placeholder="All Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      alldescription: event.target.value,
+                                    })
+                                  }
+                                />
+
+                                <input
+                                  placeholder="Tarifs"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="number"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      tarifs: parseInt(event.target.value),
+                                    })
+                                  }
+                                />
+                                <input
+                                  placeholder="Destinations"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      destination: event.target.value,
+                                    })
+                                  }
+                                />
+
+                                <div className="flex justify-center mt-4">
+                                  <Button
+                                    type="button"
+                                    value="Valider"
+                                    onClick={() => handlePut(post.id)}
+                                  />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </Popup>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -406,7 +417,7 @@ const Buy = () => {
       </div>
 
       <h1 className=" flex flex-col items-center w-full   text-black uppercase my-6  font-bold  lg:text-3xl">
-      <US title="United States" width={100}/>
+        <US title="United States" width={100} />
       </h1>
       <div className="flex flex-col items-center w-full   py-10  lg:mx-2 lg:grid lg:grid-cols-3">
         {posts.map((post) => {
@@ -415,8 +426,8 @@ const Buy = () => {
               <div className="card my-4 lg:my-6 lg:mx-20 ">
                 <div className=" card2 text-white">
                   <div key={post.id} className="px-5">
-                  <div className="flex justify-center py-6">
-                      <img src={post.image} alt="" width={80} height={80} />
+                    <div className="flex justify-center py-6">
+                      <img src={post.image} alt="" width={150} height={150} />
                     </div>
                     <p className="font-bold"> Nom:</p>
                     {post.name}
@@ -426,7 +437,6 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    
                     <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
                       <div className="mx-4 my-4 ">
                         <Button
@@ -462,183 +472,7 @@ const Buy = () => {
                         </button>
                       </div>
                       <div className="lg:opacity-0 lg:hover:opacity-100 ">
-                      <div className="flex flex-row">
-                     
-                        {adminFields.roles.includes("ROLE_ADMIN") ? (
-                          <>
-                            <button
-                              type="button"
-                              className="text-2xl "
-                              onClick={() => {
-                                handleDelete(post.id);
-                              }}
-                            >
-                              <ImBin />
-                            </button>
-                          </>
-                        ) : null}
-                      </div>
-                      <Popup
-                        trigger={
-                          <button className="text-2xl flex justify-center pt-6">
-                            {" "}
-                            <TfiWrite />
-                          </button>
-                        }
-                        position="right center"
-                      >
-                        <div class="flex flex-col items-center justify-center h-screen dark">
-  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
-                          <form
-                            action=""
-                            className="flex flex-col"
-                          >
-                              <input
-                              placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    name: event.target.value,
-                                  })
-                                }
-                              />
-                              <input
-                               placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    image: event.target.value,
-                                  })
-                                }
-                              />
-                              <input
-                               placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    description: event.target.value,
-                                  })
-                                }
-                              />
-                              <textarea
-                              placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    alldescription: event.target.value,
-                                  })
-                                }
-                              />
-                              
-                              <input
-                              placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="number"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    tarifs: parseInt(event.target.value),
-                                  })
-                                }
-                              />
-                              <input
-                              placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                                type="text"
-                                onChange={(event) =>
-                                  setEditPost({
-                                    ...editPost,
-                                    destination: event.target.value,
-                                  })
-                                }
-                              />
-
-                              <div className="flex justify-center mt-4">
-                                <Button
-                                  type="button"
-                                  value="Valider"
-                                  onClick={() => handlePut(post.id)}
-                                />
-                              </div>
-                            
-                          </form>
-                        </div>
-                        </div>
-                      </Popup> 
-
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          }
-        })}
-      </div>
-
-      <h1 className="w-full flex justify-center text-black uppercase my-6  font-bold  lg:text-3xl">
-      <AU title="Australia" width={100}/>
-      </h1>
-      <div className="flex flex-col items-center w-full lg:mx-2 lg:grid lg:grid-cols-3">
-        {posts.map((post) => {
-          
-            if (post.destination === "Océanie") {
-              return (
-                <div className="card my-4 lg:my-6 lg:mx-20 ">
-                  <div className=" card2 text-white ">
-                    <div key={post.id} className="px-5">
-                    <div className="flex justify-center py-6">
-                        <img src={post.image} alt="" width={80} height={80} />
-                      </div>
-                      <p className="font-bold"> Nom:</p>
-                      {post.name}
-                      <br />
-                      <p className="font-bold">Description:</p>
-                      {post.description}
-                      <br />
-                      <p className="font-bold">Tarifs:</p>
-                      {post.tarifs}€
-                      
-                      <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
-                        <div className="mx-4 my-4 ">
-                          <Button
-                            type="button"
-                            value="Buy Here"
-                            onClick={() => {
-                              updateCart(post, post.tarifs);
-                            }}
-                          />
-                        </div>
-                        <div className="mx-4 my-4">
-                          <Link to={`/shop/${post.id}`}>
-                            <Button type="button" value="Show more" />
-                          </Link>
-                        </div>
-                        <div className="lg:flex lg:flex-row lg:justify-center my-4">
-                          <button
-                            type="button"
-                            value="+"
-                            className="lg:pr-4"
-                            onClick={() => AddQuantity()}
-                          >
-                            +
-                          </button>
-                          <h1 className="flex justify-center my-4">{count}</h1>
-                          <button
-                            type="button"
-                            value="-"
-                            className="lg:pl-4"
-                            onClick={() => RemoveQuantityQuantity()}
-                          >
-                            -
-                          </button>
-                        </div>
-                        <div className="lg:opacity-0 lg:hover:opacity-100 ">
                         <div className="flex flex-row">
-                       
                           {adminFields.roles.includes("ROLE_ADMIN") ? (
                             <>
                               <button
@@ -663,14 +497,14 @@ const Buy = () => {
                           position="right center"
                         >
                           <div class="flex flex-col items-center justify-center h-screen dark">
-    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-200 mb-4">Edit product</h2>
-                            <form
-                              action=""
-                              className="flex flex-col"
-                            >
+                            <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+                              <h2 class="text-2xl font-bold text-gray-200 mb-4">
+                                Edit product
+                              </h2>
+                              <form action="" className="flex flex-col">
                                 <input
-                                placeholder=" Name" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder=" Name"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="text"
                                   onChange={(event) =>
                                     setEditPost({
@@ -680,7 +514,8 @@ const Buy = () => {
                                   }
                                 />
                                 <input
-                                 placeholder=" Image" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder=" Image"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="text"
                                   onChange={(event) =>
                                     setEditPost({
@@ -690,7 +525,8 @@ const Buy = () => {
                                   }
                                 />
                                 <input
-                                 placeholder=" Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder=" Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="text"
                                   onChange={(event) =>
                                     setEditPost({
@@ -700,7 +536,8 @@ const Buy = () => {
                                   }
                                 />
                                 <textarea
-                                placeholder="All Description" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder="All Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="text"
                                   onChange={(event) =>
                                     setEditPost({
@@ -709,9 +546,10 @@ const Buy = () => {
                                     })
                                   }
                                 />
-                                
+
                                 <input
-                                placeholder="Tarifs" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder="Tarifs"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="number"
                                   onChange={(event) =>
                                     setEditPost({
@@ -721,7 +559,8 @@ const Buy = () => {
                                   }
                                 />
                                 <input
-                                placeholder="Destinations" class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  placeholder="Destinations"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                                   type="text"
                                   onChange={(event) =>
                                     setEditPost({
@@ -730,7 +569,7 @@ const Buy = () => {
                                     })
                                   }
                                 />
-  
+
                                 <div className="flex justify-center mt-4">
                                   <Button
                                     type="button"
@@ -738,17 +577,190 @@ const Buy = () => {
                                     onClick={() => handlePut(post.id)}
                                   />
                                 </div>
-                              
-                            </form>
+                              </form>
+                            </div>
                           </div>
-                          </div>
-                        </Popup> 
-  
-                      </div>
+                        </Popup>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            );
+          }
+        })}
+      </div>
+
+      <h1 className="w-full flex justify-center text-black uppercase my-6  font-bold  lg:text-3xl">
+        <AU title="Australia" width={100} />
+      </h1>
+      <div className="flex flex-col items-center w-full lg:mx-2 lg:grid lg:grid-cols-3">
+        {posts.map((post) => {
+          if (post.destination === "Océanie") {
+            return (
+              <div className="card my-4 lg:my-6 lg:mx-20 ">
+                <div className=" card2 text-white ">
+                  <div key={post.id} className="px-5">
+                    <div className="flex justify-center py-6">
+                      <img src={post.image} alt="" width={150} height={150} />
+                    </div>
+                    <p className="font-bold"> Nom:</p>
+                    {post.name}
+                    <br />
+                    <p className="font-bold">Description:</p>
+                    {post.description}
+                    <br />
+                    <p className="font-bold">Tarifs:</p>
+                    {post.tarifs}€
+                    <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
+                      <div className="mx-4 my-4 ">
+                        <Button
+                          type="button"
+                          value="Buy Here"
+                          onClick={() => {
+                            updateCart(post, post.tarifs);
+                          }}
+                        />
+                      </div>
+                      <div className="mx-4 my-4">
+                        <Link to={`/shop/${post.id}`}>
+                          <Button type="button" value="Show more" />
+                        </Link>
+                      </div>
+                      <div className="lg:flex lg:flex-row lg:justify-center my-4">
+                        <button
+                          type="button"
+                          value="+"
+                          className="lg:pr-4"
+                          onClick={() => AddQuantity()}
+                        >
+                          +
+                        </button>
+                        <h1 className="flex justify-center my-4">{count}</h1>
+                        <button
+                          type="button"
+                          value="-"
+                          className="lg:pl-4"
+                          onClick={() => RemoveQuantityQuantity()}
+                        >
+                          -
+                        </button>
+                      </div>
+                      <div className="lg:opacity-0 lg:hover:opacity-100 ">
+                        <div className="flex flex-row">
+                          {adminFields.roles.includes("ROLE_ADMIN") ? (
+                            <>
+                              <button
+                                type="button"
+                                className="text-2xl "
+                                onClick={() => {
+                                  handleDelete(post.id);
+                                }}
+                              >
+                                <ImBin />
+                              </button>
+                            </>
+                          ) : null}
+                        </div>
+                        <Popup
+                          trigger={
+                            <button className="text-2xl flex justify-center pt-6">
+                              {" "}
+                              <TfiWrite />
+                            </button>
+                          }
+                          position="right center"
+                        >
+                          <div class="flex flex-col items-center justify-center h-screen dark">
+                            <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+                              <h2 class="text-2xl font-bold text-gray-200 mb-4">
+                                Edit product
+                              </h2>
+                              <form action="" className="flex flex-col">
+                                <input
+                                  placeholder=" Name"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      name: event.target.value,
+                                    })
+                                  }
+                                />
+                                <input
+                                  placeholder=" Image"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      image: event.target.value,
+                                    })
+                                  }
+                                />
+                                <input
+                                  placeholder=" Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      description: event.target.value,
+                                    })
+                                  }
+                                />
+                                <textarea
+                                  placeholder="All Description"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      alldescription: event.target.value,
+                                    })
+                                  }
+                                />
+
+                                <input
+                                  placeholder="Tarifs"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="number"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      tarifs: parseInt(event.target.value),
+                                    })
+                                  }
+                                />
+                                <input
+                                  placeholder="Destinations"
+                                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                  type="text"
+                                  onChange={(event) =>
+                                    setEditPost({
+                                      ...editPost,
+                                      destination: event.target.value,
+                                    })
+                                  }
+                                />
+
+                                <div className="flex justify-center mt-4">
+                                  <Button
+                                    type="button"
+                                    value="Valider"
+                                    onClick={() => handlePut(post.id)}
+                                  />
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </Popup>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             );
           }
         })}
