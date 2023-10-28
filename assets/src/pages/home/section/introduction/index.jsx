@@ -71,11 +71,11 @@ const Introduction = () => {
             <Button
               type="button"
               value="Shop"
-              className="my-6 flex justify-center"
+              className=" flex justify-center"
             />
           </Link>
         </div>
-        <div className="flex items-center justify-center mx-auto lg:hidden ">
+        <div className="flex items-center justify-center mx-auto sm:my-0 md:my-14 lg:hidden ">
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
             href="https://www.openrunner.com/my-space/mobile-app-history"

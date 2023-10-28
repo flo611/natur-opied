@@ -252,14 +252,16 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    <div className="flex flex-row items-center justify-center  lg:flex lg:flex-row ">
-                      <div className="mx-4 my-4 text-xl">
+                    <div className="flex flex-col">
+                    <div className="sm:flex sm:flex-col lg:flex lg:flex-row items-center justify-center  ">
+                      <div className="mx-4 my-4 text-xl ">
                         <Link to={`/shop/${post.id}`}>
                           {/* <Button type="button" value="En savoir plus" /> */}
                           <PiMagnifyingGlassBold/>
                         </Link>
                       </div>
                       <div className="mx-4 my-4 ">
+                        <div></div>
                         <button
                           type="button"
                           value="Ajouter panier"
@@ -274,11 +276,11 @@ const Buy = () => {
                             <PiShoppingCartBold/>
                             </button>
                       </div>
-                      <div className=" lg:flex lg:flex-row lg:justify-center my-4">
+                      <div className="flex flex-row lg:justify-center my-4">
                         <button
                           type="button"
                           value="+"
-                          className="lg:pr-4"
+                          className="sm:pr-8 lg:pr-4"
                           onClick={() => {
                             AddQuantity(post.id);
                             // console.log(ref);
@@ -292,19 +294,20 @@ const Buy = () => {
                         <button
                           type="button"
                           value="-"
-                          className="lg:pl-4"
+                          className="sm:pl-7 lg:pl-4"
                           onClick={() => RemoveQuantity(post.id)}
                         >
                           -
                         </button>
                       </div>
-                      <div className="lg:opacity-0 lg:hover:opacity-100 ">
-                        <div className="flex flex-row ">
+                      </div>
+                      <div className="  flex flex-row   w-full justify-center lg:mt-4 lg:opacity-0 lg:hover:opacity-100 ">
+                        <div className="lg:flex lg:flex-row  ">
                           {adminFields.roles.includes("ROLE_ADMIN") ? (
                             <>
                               <button
                                 type="button "
-                                className="bin "
+                                className="bin  mr-8 "
                                 onClick={() => {
                                   handleDelete(post.id);
                                 }}
@@ -314,7 +317,7 @@ const Buy = () => {
                         </div>
                         <Popup
                           trigger={
-                            <button className="text-2xl flex justify-center w-full pt-6">
+                            <button className="text-3xl flex flex-row  ml-8 ">
                               {" "}
                               <TfiWrite />
                             </button>
@@ -407,6 +410,7 @@ const Buy = () => {
                           </div>
                         </Popup>
                       </div>
+                    
                     </div>
                   </div>
                 </div>
@@ -437,59 +441,72 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
-                      <div className="mx-4 my-4 ">
-                        <Button
-                          type="button"
-                          value="Buy Here"
-                          onClick={() => {
-                            updateCart(post, post.tarifs);
-                          }}
-                        />
-                      </div>
-                      <div className="mx-4 my-4">
+                    <div className="flex flex-col">
+                    <div className="sm:flex sm:flex-col lg:flex lg:flex-row items-center justify-center  ">
+                      <div className="mx-4 my-4 text-xl ">
                         <Link to={`/shop/${post.id}`}>
-                          <Button type="button" value="Show more" />
+                          {/* <Button type="button" value="En savoir plus" /> */}
+                          <PiMagnifyingGlassBold/>
                         </Link>
                       </div>
-                      <div className="lg:flex lg:flex-row lg:justify-center my-4">
+                      <div className="mx-4 my-4 ">
+                        <div></div>
+                        <button
+                          type="button"
+                          value="Ajouter panier"
+                          onClick={() => {
+                            updateCart(
+                              post,
+                              post.tarifs * productQuantities[post.id] || 5
+                              );
+                            }}
+                            
+                            >
+                            <PiShoppingCartBold/>
+                            </button>
+                      </div>
+                      <div className="flex flex-row lg:justify-center my-4">
                         <button
                           type="button"
                           value="+"
-                          className="lg:pr-4"
-                          onClick={() => AddQuantity()}
+                          className="sm:pr-8 lg:pr-4"
+                          onClick={() => {
+                            AddQuantity(post.id);
+                            // console.log(ref);
+                          }}
                         >
                           +
                         </button>
-                        <h1 className="flex justify-center my-4">{count}</h1>
+                        <h1 className="flex justify-center my-4">
+                          {productQuantities[post.id] || 1}
+                        </h1>
                         <button
                           type="button"
                           value="-"
-                          className="lg:pl-4"
-                          onClick={() => RemoveQuantityQuantity()}
+                          className="sm:pl-7 lg:pl-4"
+                          onClick={() => RemoveQuantity(post.id)}
                         >
                           -
                         </button>
                       </div>
-                      <div className="lg:opacity-0 lg:hover:opacity-100 ">
-                        <div className="flex flex-row">
+                      </div>
+                      <div className="  flex flex-row   w-full justify-center lg:mt-4 lg:opacity-0 lg:hover:opacity-100 ">
+                        <div className="lg:flex lg:flex-row  ">
                           {adminFields.roles.includes("ROLE_ADMIN") ? (
                             <>
                               <button
-                                type="button"
-                                className="text-2xl "
+                                type="button "
+                                className="bin  mr-8 "
                                 onClick={() => {
                                   handleDelete(post.id);
                                 }}
-                              >
-                                <ImBin />
-                              </button>
+                              ></button>
                             </>
                           ) : null}
                         </div>
                         <Popup
                           trigger={
-                            <button className="text-2xl flex justify-center pt-6">
+                            <button className="text-3xl flex flex-row  ml-8 ">
                               {" "}
                               <TfiWrite />
                             </button>
@@ -612,59 +629,72 @@ const Buy = () => {
                     <br />
                     <p className="font-bold">Tarifs:</p>
                     {post.tarifs}€
-                    <div className="flex flex-col items-center justify-center  lg:flex lg:flex-col ">
-                      <div className="mx-4 my-4 ">
-                        <Button
-                          type="button"
-                          value="Buy Here"
-                          onClick={() => {
-                            updateCart(post, post.tarifs);
-                          }}
-                        />
-                      </div>
-                      <div className="mx-4 my-4">
+                    <div className="flex flex-col">
+                    <div className="sm:flex sm:flex-col lg:flex lg:flex-row items-center justify-center  ">
+                      <div className="mx-4 my-4 text-xl ">
                         <Link to={`/shop/${post.id}`}>
-                          <Button type="button" value="Show more" />
+                          {/* <Button type="button" value="En savoir plus" /> */}
+                          <PiMagnifyingGlassBold/>
                         </Link>
                       </div>
-                      <div className="lg:flex lg:flex-row lg:justify-center my-4">
+                      <div className="mx-4 my-4 ">
+                        <div></div>
+                        <button
+                          type="button"
+                          value="Ajouter panier"
+                          onClick={() => {
+                            updateCart(
+                              post,
+                              post.tarifs * productQuantities[post.id] || 5
+                              );
+                            }}
+                            
+                            >
+                            <PiShoppingCartBold/>
+                            </button>
+                      </div>
+                      <div className="flex flex-row lg:justify-center my-4">
                         <button
                           type="button"
                           value="+"
-                          className="lg:pr-4"
-                          onClick={() => AddQuantity()}
+                          className="sm:pr-8 lg:pr-4"
+                          onClick={() => {
+                            AddQuantity(post.id);
+                            // console.log(ref);
+                          }}
                         >
                           +
                         </button>
-                        <h1 className="flex justify-center my-4">{count}</h1>
+                        <h1 className="flex justify-center my-4">
+                          {productQuantities[post.id] || 1}
+                        </h1>
                         <button
                           type="button"
                           value="-"
-                          className="lg:pl-4"
-                          onClick={() => RemoveQuantityQuantity()}
+                          className="sm:pl-7 lg:pl-4"
+                          onClick={() => RemoveQuantity(post.id)}
                         >
                           -
                         </button>
                       </div>
-                      <div className="lg:opacity-0 lg:hover:opacity-100 ">
-                        <div className="flex flex-row">
+                      </div>
+                      <div className="  flex flex-row   w-full justify-center lg:mt-4 lg:opacity-0 lg:hover:opacity-100 ">
+                        <div className="lg:flex lg:flex-row  ">
                           {adminFields.roles.includes("ROLE_ADMIN") ? (
                             <>
                               <button
-                                type="button"
-                                className="text-2xl "
+                                type="button "
+                                className="bin  mr-8 "
                                 onClick={() => {
                                   handleDelete(post.id);
                                 }}
-                              >
-                                <ImBin />
-                              </button>
+                              ></button>
                             </>
                           ) : null}
                         </div>
                         <Popup
                           trigger={
-                            <button className="text-2xl flex justify-center pt-6">
+                            <button className="text-3xl flex flex-row  ml-8 ">
                               {" "}
                               <TfiWrite />
                             </button>
