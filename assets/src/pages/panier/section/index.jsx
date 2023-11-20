@@ -137,7 +137,7 @@ console.log(test, basket);
         </div>
         <hr className="sm:my-4 sm:mx-16 lg:my-6 lg:mx-20"/>
         <h1 className="flex justify-center pb-4 text-2xl text-gray-200">
-          Total = {total} €
+          Total = {total } €
         </h1>
       </div>
       <div className="lg:flex lg:flex-row lg:w-full lg:justify-center ">
