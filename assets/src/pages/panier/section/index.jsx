@@ -3,7 +3,7 @@ import Button from "../../../components/tools/button";
 import { CartContext } from "../../../components/context/cartProvider";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { SlBasket } from "react-icons/sl";
+
 
 const Panier = () => {
   const {
@@ -13,12 +13,15 @@ const Panier = () => {
     setTotalBasket,
     totalArrayBasket,
     setTotalArrayBasket,
+
   } = useContext(CartContext);
 
   const total = JSON.parse(localStorage.getItem("total") || "[]").reduce(
     (acc, val) => acc + val,
-    0
+    0 
   );
+
+
 
   const DeleteItem = (id) => {
     const updatedBasket = [...basket];
@@ -26,45 +29,47 @@ const Panier = () => {
     const filteredBasket = updatedBasket.filter((item) => item.id !== id);
 
     setBasket(filteredBasket);
+ 
 
-    // const newTotal = filteredBasket.reduce((acc, item) => acc + item.tarifs, 0);
-    // localStorage.setItem('total', JSON.stringify(newTotal));
-    // setTotalBasket(newTotal);
-
-    // const newTotalQty = filteredBasket.length;
-    // const newTotalPrice = filteredBasket.reduce((acc, item) => acc + item.tarifs, 0);
-    // setTotalBasket(newTotalQty);
-    // localStorage.setItem('total', JSON.stringify(newTotalQty));
-    // setTotalArrayBasket(filteredBasket);
   };
 
-  const test = [];
+ const UpdateTotal =() =>{
+  const newtotal = total 
 
-  function removeDuplicates(arr) {
+ };
+
+  const test = [];
+ 
+function removeDuplicates(arr) {
+  if (!Array.isArray(arr)) {
+    console.error("basket is not an array");
+    return;
+}
     const uniqueIds = [];
 
     const unique = arr.filter((element) => {
-      const isDuplicate = uniqueIds.includes(element.id);
+        const isDuplicate = uniqueIds.includes(element.id);
 
-      if (!isDuplicate) {
-        uniqueIds.push(element.id);
+        if (!isDuplicate) {
+            uniqueIds.push(element.id);
 
-        return true;
-      }
+            return true;
+        }
 
-      return false;
+        return false;
     });
-    test.push(unique);
-  }
 
-  removeDuplicates(basket);
-  console.log(test, basket);
+    test.push(unique);
+}
+
+removeDuplicates(basket);
+console.log(test, basket);
 
   return (
     <>
      <div >
       <div className="bg-gray-900 text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5  my-20 hover:bg-gray-900 hover:shadow-2xl hover:shadow-sky-400 transition-all duration-500 ease-in-out ">
-      <div class="sm:my-6 uppercase tracking-wide  text-gray-200 font-semibold flex justify-center lg:pt-10">
+      <div className="sm:my-6 uppercase tracking-wide  text-gray-200 font-semibold flex justify-center lg:pt-10">
       <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-10 w-10"
@@ -73,9 +78,9 @@ const Panier = () => {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg></div>
@@ -114,6 +119,7 @@ const Panier = () => {
                           onClick={() => {
                             DeleteItem(element.id);
                             window.localStorage.removeItem("total");
+                            window.location.reload();
                           }}
                         >
                           
@@ -131,7 +137,7 @@ const Panier = () => {
         </div>
         <hr className="sm:my-4 sm:mx-16 lg:my-6 lg:mx-20"/>
         <h1 className="flex justify-center pb-4 text-2xl text-gray-200">
-          Total = {total}€
+          Total = {total} €
         </h1>
       </div>
       <div className="lg:flex lg:flex-row lg:w-full lg:justify-center ">
@@ -150,9 +156,9 @@ const Panier = () => {
             }
             position="top left"
           >
-            <div class="flex flex-col items-center justify-center h-screen pt-40 dark">
-              <div class="w-full max-w-md bg-gray-900 rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-bold text-gray-200 mb-4">Paiement</h2>
+            <div className="flex flex-col items-center justify-center h-screen pt-40 dark">
+              <div className="w-full max-w-md bg-gray-900 rounded-lg shadow-md p-6">
+                <h2 className="text-2xl font-bold text-gray-200 mb-4">Paiement</h2>
 
                 <h1 className=" uppercase text-gray-200">
                   Veuillez régler le montant ci-dessous:

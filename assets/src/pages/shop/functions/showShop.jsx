@@ -12,8 +12,11 @@ import { CartContext } from "../../../components/context/cartProvider";
 const ShowShop = () => {
   let id = useParams().id;
 
-  const { basket, setBasketCount, totalArrayBasket } = useContext(CartContext);
+  const { basket, setBasketCount, totalArrayBasket, setBasket } = useContext(CartContext);
   const [products, setProducts] = useState({});
+
+
+
 
   useEffect(() => {
     axios.get(`/api/products/${id}`).then((response) => {
@@ -55,6 +58,7 @@ const ShowShop = () => {
                     type="button"
                     value="Buy Here"
                     onClick={() => {
+                      console.log("ok");
                       updateCart(products, products.tarifs);
                     }}
                   />

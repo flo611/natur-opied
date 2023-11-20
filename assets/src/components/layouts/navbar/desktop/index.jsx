@@ -78,7 +78,8 @@ const Navbardesktop = () => {
                 >
                   <RiAdminLine />
                 </a>
-                <a class="flex items-center hover:text-gray-200" href="/panier">
+                <Link to= "/panier"
+                class="flex items-center hover:text-gray-200" >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -100,7 +101,7 @@ const Navbardesktop = () => {
                       <sup>{basket.length}</sup>
                     </span>
                   </span>
-                </a>
+                </Link>
 
                 <Link
                   to="/dashboard"

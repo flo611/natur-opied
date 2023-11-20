@@ -9,8 +9,10 @@ const CartProvider = ({ children }) => {
   const [totalArrayBasket, setTotalArrayBasket] = useState([]);
   const [quantity, setQuantity] = useState(0);
 
+
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
   const total = JSON.parse(localStorage.getItem("total") || "[]");
+
 
   useEffect(() => {
     setBasket(cart);

@@ -16,6 +16,7 @@ import {PiShoppingCartBold} from "react-icons/pi";
 
 const Buy = () => {
   const [posts, setPosts] = useState([]);
+
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
   const [editPost, setEditPost] = useState({
     description: "",
@@ -92,7 +93,7 @@ const Buy = () => {
 
   const config = {
     headers: {
-      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTgyMzU5MzYsImV4cCI6MTY5ODIzOTUzNiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQG5hdHVyb3BpZWQuZnIifQ.a6uK7VniuY86lN33Fg_MAFrqchKxJA27EXMPRzuQWbBeCtnki1A4pNyfy5Hnf3eJN0FSkLdhZcehLBJ_lXm6Kn2ajht8uZpLFodKG_4-0FVCBAOs5CKEdV7tpDY5IFZzTpbqDDHHzyUfdBVbkX2xuWtJsEe3nHkVJSUtkTFgt6wvZ6-M3zo_Wt1obyGx0_v1uXTRC5XtAPPIz39AOvARsVeXK6kDEdbTX8svNVWxsECmDG6C3HPzieBvqSNXjosykybtCQqU94-IwNIpBeUyresetHNkxTRqdOfgkU14RMV-znFJD1OJE_EaVa-EvELDuu6u7xyWSvKjetPF-vK3VQ`,
+      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTk0MzY1MjcsImV4cCI6MTY5OTQ0MDEyNywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQG5hdHVyb3BpZWQuZnIifQ.cdysHTHxysWwnZIE_QOofCAtrUW639hjIW5bwDVk6eW-kWLNlO9dQCdWIte2CEPsnOh8jEtYCnX4B0E7uTOKeNEH7f5Ea9xYL69_u2k9zMoKA8nhU22sj8PNWkm42aD9HCAnSOzjh6MEV0EnqVsuSNE-l_VXRxwawkx_aPyiVyOxmnhoSGT0f-5T8HlD_3XLZhhtg7qk4iJS9DCuHjH1-zuLVbhNJiwUElPec-orTbzTBtwCXK1Iz2wJuHHHxEVbh9r-ISspsLKXR7jjzorEMa4e89SO3m2ZoLC7iBJpQpWNy-4xbQCUExqM-0eC83ntfTz7qWtQSd09fc1QJXy3kw`,
     },
   };
   const [adminFields, setAdminFields] = useState({ roles: ["ROLE_ADMIN"] });
