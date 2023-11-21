@@ -4,9 +4,6 @@ import axios from "axios";
 
 const Login = () => {
   const [userData, setUserData] = useState({});
-  const [token, setToken] = useState("");
-  const [error, setError] = useState(null);
-
 
 
   useEffect(() => {
@@ -16,45 +13,52 @@ const Login = () => {
         console.log(response.data);
         setUserData(response.data.user);
 
-        const data = {
-          username: response.data.user.email,
-          password: response.data.user.password,
-        };
 
-     
+
+        const editUser = {
+
+            "email": "string",
+            "roles": [
+              "string"
+            ],
+            "password": "string",
+            "pseudo": "string",
+            "adress": "string",
+            "CP": 0,
+            "City": "string",
+            "name": "string",
+            "surname": "string",
+            "image": "string",
+            "cP": 0,
+            "city": "string"
+          }
+       
+        EditUser(editUser);
+      })
+      .catch((error) => {
+        console.error(error);
       });
-      const editUser = {
-    
-        email: "string",
-      roles: [
-          "string"
-        ],
-        password: "string",
-        pseudo: "string",
-        adress: "string",
-        CP: 0,
-        City: "string",
-        name: "string",
-        surname: "string",
-        image: "string",
-        cP: 0,
-        city: "string"
-      
-    };
-  
-    const EditUser = () => {
-      axios.put(`/api/users/${userData.id}`, editUser)
-        .then((response) => {
-          console.log(response);
-          // Mettez à jour l'état ou effectuez d'autres actions après la modification réussie
-        })
-        .catch((error) => {
-          console.error(error);
-          // Gérez les erreurs ici
-        });
-    };
-
   }, []);
+
+
+  const config = {
+    headers: {
+      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDA1NzQ2NzksImV4cCI6MTcwMDU3ODI3OSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlckBuYXR1cm9waWVkLmZyIn0.BXLhhx76BYcIV2N-rwfKlayurlzybd0xFs3EwOg5z7ynCSdA1VSHvzbQ2YLJhes3UB8swTjO2W9kRPyOv4mEdRohJFcydzzn8QG7M2RfOBmd3TVOvq4v8enwLjgvSfL_Q4Jbh0k5d2sfjbXELLTRH8iSO5vIDVNr1NS-cgOZbxRIwescQtQIEvPjGQgYnYjboGQ_oUwBKSQzmYQOYEvIW9-vClZSwi6Tkmz_abGpjw3JZkX5iEK1EpX6aedKJsjrX8mqxLetmLSX2V-cKNX4HHTbvxU5RgR_-Etqk23voAxGQDhZbSDaRAy7_Kf1WLn2tYrnprGsE6ZvNKn94sPHdA `,
+      "Content-type": "application/json",
+    },
+  };
+
+  const EditUser = () => {
+    axios.put(`/api/users/${id}`, userData, config)
+      .then((response) => {
+        console.log(response);
+     
+      })
+      .catch((error) => {
+        console.error(error);
+       
+      });
+  };
 
   return (
     <>
