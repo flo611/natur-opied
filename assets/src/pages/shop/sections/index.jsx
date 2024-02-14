@@ -155,6 +155,7 @@ const Buy = () => {
 
   return (
     <>
+
       <h1 className="w-full flex justify-center text-black uppercase pt-20  font-bold  lg:text-3xl">
         <EU title="European Union" width={100} />
       </h1>

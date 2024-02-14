@@ -29,7 +29,7 @@ const Navbardesktop = () => {
                 <li>
                   <a
                     className="hover:text-gray-200"
-                    href="https://naturopied.sabine-portfolio.fr/"
+                    href="https://naturopied.org/"
                   >
                     Home
                   </a>
