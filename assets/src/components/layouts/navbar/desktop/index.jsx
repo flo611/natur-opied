@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/cartProvider";
 import { useState } from "react";
 import { RiAdminLine } from "react-icons/ri";
+import { FaUserPlus } from "react-icons/fa6";
 import { TbApi } from "react-icons/tb";
 import { IoSpeedometerOutline } from "react-icons/io5";
 
@@ -73,13 +74,21 @@ const Navbardesktop = () => {
 
               <div className="hidden xl:flex items-center space-x-5 ">
                 <a
+                  className="hover:text-gray-200  "
+                  href="https://naturopied.org/register"
+                >
+                  <FaUserPlus />
+                </a>
+                <a
                   className="hover:text-gray-200"
-                  href="http://localhost:8000/login"
+                  href="https://naturopied.org/login"
                 >
                   <RiAdminLine />
                 </a>
-                <Link to= "/panier"
-                class="flex items-center hover:text-gray-200" >
+                <Link
+                  to="/panier"
+                  class="flex items-center hover:text-gray-200"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
