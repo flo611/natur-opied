@@ -38,7 +38,7 @@ const Buy = () => {
   };
   const handlePut = (id) => {
     axios
-      .put(`http://localhost:8000/api/products/${id}`, data, config)
+      .put(`https://naturopied.org/api/products/${id}`, data, config)
       .then(() => {
         alert("Post modifié!");
         window.location.reload();
@@ -49,7 +49,7 @@ const Buy = () => {
   };
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8000/api/products/${id}`, config)
+      .delete(`https://naturopied.org/api/products/${id}`, config)
       .then(() => {
         alert("Post supprimé !");
         window.location.reload();
@@ -61,7 +61,7 @@ const Buy = () => {
 
   const handleAdd = () => {
     axios
-      .post(`http://localhost:8000/api/products`, newdata, config)
+      .post(`https://naturopied.org/api/products`, newdata, config)
       .then(() => {
         alert("Post crée !");
 
@@ -113,7 +113,7 @@ const Buy = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/products`)
+      .get(`https://naturopied.org/api/products`)
       .then((response) => {
         // console.log(response.data["hydra:member"]);
         setPosts(response.data["hydra:member"]);
